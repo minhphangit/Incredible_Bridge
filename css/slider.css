@@ -164,25 +164,25 @@ circle {
 }
 
 .slide1 {
-  background-image: url(/img/bt1.jpg);
+  background-image: url(../img/bt1.jpg);
 }
 
 .slide2 {
-  background-image: url(/img/baner2.jpg);
+  background-image: url(../img/baner2.jpg);
 }
 
 .slide3 {
-  background-image: url(/img/bt2.jpg);
+  background-image: url(../img/bt2.jpg);
 }
 
 .slide4 {
-  background-image: url(/img/bt3.JPG);
+  background-image: url(../img/bt3.JPG);
 }
 .slide5 {
-  background-image: url(/img/bt4.jpg);
+  background-image: url(../img/bt4.jpg);
 }
 .slide6 {
-  background-image: url(/img/bt5.jpg);
+  background-image: url(../img/bt5.jpg);
 }
 .slider-circle {
   position: absolute;
