@@ -1,0 +1,323 @@
+/* text-slider */
+.text-slider {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #222222;
+  color: #eff5f5;
+}
+.text-slider .text-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-style: 12px;
+}
+/* slider */
+.img-baner:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.content-wrapper {
+  top: 85%;
+  left: 25%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn-buy-now {
+  top: 95%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+/* List product */
+.list-product-top {
+  background-color: #86b817;
+  width: 100%;
+  height: 580px;
+  border-radius: 32px;
+  margin: 50px 0px;
+}
+.list-product-slider {
+  background-color: #9cc93c;
+  width: 90% !important;
+  margin-left: 5%;
+}
+.badge-discount {
+  top: 0%;
+  left: 0%;
+}
+.badge-discount-slider {
+  top: 0%;
+  left: 4.5%;
+}
+.list-title h1,
+.list-title {
+  color: #ffffff;
+  text-align: center;
+}
+.list-title .right-title h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.btn-add-cart {
+  margin-top: 12px;
+  border-radius: 32px;
+}
+/* slider list product */
+.list-product-top .list-product {
+  border-radius: 32px;
+}
+.card-body {
+  text-align: center;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 650;
+}
+.card-text {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: justify;
+  max-height: 4em; /* Đặt giới hạn chiều cao tối đa tương đương khoảng 3 dòng văn bản */
+  overflow: hidden; /* Ẩn nội dung dư thừa khi vượt quá số dòng quy định */
+  line-height: 1.4;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.slider-item a:hover {
+  color: #86b817;
+}
+.price {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* css slider */
+.list-product {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.slider-inner {
+  width: 9999%;
+  height: auto;
+  list-style: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: all 0.75s ease;
+}
+.slider-inner li img {
+  transition: 0.5s;
+}
+.slider-inner li img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.slider-item {
+  width: 22.66vw;
+  height: 100%;
+  float: left;
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 5px 3px;
+  background: white;
+  text-align: center;
+  transform: translateY(-50%);
+  transition: all 0.15s ease;
+  border: 1px solid #ddd;
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#prev {
+  left: 0%;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev:hover,
+#next:hover {
+  color: #888;
+}
+
+/* list-product-bottom */
+.list-product-bottom {
+  background-color: #86b817;
+  width: 100%;
+  height: auto;
+  margin: 70px 0px;
+  border-radius: 32px;
+  padding-bottom: 12px;
+}
+/* list product hot trend */
+.list-product-hottrend a:hover {
+  color: #86b817;
+}
+.list-product-hottrend a img {
+  transition: 0.5s;
+}
+.list-product-hottrend a img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.card-img {
+  border-radius: 12px 12px 0px 0px;
+  height: 160px;
+}
+/* Tìm kính phù hợp */
+.text-desc {
+  inline-size: 500px;
+  overflow-wrap: break-word;
+}
+.achievement a:hover {
+  color: #86b817;
+}
+.achievement h1,
+.achievement .list-title {
+  color: #000000;
+}
+.achievement .img-baner {
+  transition: 0.5s;
+}
+.achievement .img-baner:hover {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+.img-baner {
+  border-radius: 28px;
+}
+/* Liên hệ chúng tôi */
+.map-bg {
+  width: 100%;
+  height: 500px;
+}
+/* Vũ trụ truyền thông */
+.social-desc {
+  font-weight: 350;
+  line-height: 24px;
+}
+.social-link-fb,
+.social-link-ig,
+.social-link-tiktok {
+  width: 230px;
+  height: 200px;
+}
+.social-link-fb {
+  top: 23%;
+  left: 6%;
+  background-color: #0d8ef1;
+  width: 230px;
+  height: 200px;
+}
+.social-link-ig {
+  top: -12%;
+  left: 58%;
+  background-image: linear-gradient(
+    to top right,
+    #e9875f,
+    #d75b65,
+    #ca4b8c,
+    #b93f9a,
+    #a93894
+  );
+}
+.social-link-tiktok {
+  top: 60%;
+  left: 58%;
+  background-image: linear-gradient(
+    to top left,
+    #bc0102,
+    #450100,
+    #000000,
+    #003938,
+    #00afae
+  );
+}
+
+/* HỎI ĐÁP Q & A CÙNG ANNA */
+.accordion-item .accordion-body p {
+  padding-top: 36px;
+  line-height: 24px;
+}
+/* Responesive */
+/* mobile */
+@media only screen and (max-width: 767px) {
+  .btn-buy-now {
+    transform: scale(0.5);
+    top: 90%;
+    left: 34%;
+  }
+  .choose-glass-text {
+    transform: scale(0.6);
+    order: 2;
+  }
+  .choose-glass-img {
+    order: 1;
+  }
+  .btn-search-info {
+    transform: scale(0.6);
+    right: 0;
+  }
+  .list-product-top .list-title span {
+    margin-right: 0.5rem !important;
+    margin-left: 0.5rem !important;
+    text-align: justify !important;
+    font-size: 16px !important;
+  }
+  .parent .left {
+    margin-top: 275px;
+  }
+  .parent .right {
+    margin-left: 20.5%;
+  }
+  .slide1,
+  .slide2,
+  .slide3,
+  .slide4,
+  .slide5,
+  .slide6 {
+    font-size: 24px !important;
+  }
+  .list-product-slider .slider-inner .slider-item {
+    margin-left: 80px;
+    transform: scale(0.6);
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .parent .left {
+    margin-top: 275px;
+  }
+  .list-product-slider .slider-inner .slider-item {
+    transform: scale(0.7);
+  }
+
+  .choose-glass-text {
+    transform: scale(0.7);
+  }
+  .img-baner {
+    height: 100%;
+  }
+}
