@@ -118,8 +118,7 @@
 }
 .list-product-slider {
   background-color: #9cc93c;
-  width: 90% !important;
-  margin-left: 5%;
+  width: 100%;
 }
 .badge-discount {
   top: 0%;
@@ -129,12 +128,11 @@
   top: 0%;
   left: 4.5%;
 }
-.list-title h1,
+.list-title h2,
 .list-title {
-  color: #ffffff;
   text-align: center;
 }
-.list-title .right-title h1 {
+.list-title .right-title h2 {
   font-weight: 700;
   font-size: 36px;
 }
@@ -246,7 +244,6 @@
   height: auto;
   margin: 70px 0px;
   border-radius: 32px;
-  padding-bottom: 12px;
 }
 /* list product hot trend */
 .list-product-hottrend a:hover {
@@ -271,7 +268,7 @@
 .achievement a:hover {
   color: #86b817;
 }
-.achievement h1,
+
 .achievement .list-title {
   color: #000000;
 }
