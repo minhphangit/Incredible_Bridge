@@ -85,3 +85,46 @@
     },
   });
 })(jQuery);
+
+// photo library
+$(".portfolio-menu ul li").click(function () {
+  $(".portfolio-menu ul li").removeClass("active");
+  $(this).addClass("active");
+
+  var selector = $(this).attr("data-filter");
+  $(".portfolio-item").isotope({
+    filter: selector,
+  });
+  return false;
+});
+$(document).ready(function () {
+  var popup_btn = $(".popup-btn");
+  popup_btn.magnificPopup({
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+  });
+});
+
+// visitors
+var counterContainer = document.querySelector(".website-counter");
+var resetButton = document.querySelector("#reset");
+var visitCount = localStorage.getItem("page_view");
+
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+}
+counterContainer.innerHTML = visitCount;
+
+// Adding onClick event listener
+resetButton.addEventListener("click", () => {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+  counterContainer.innerHTML = visitCount;
+});

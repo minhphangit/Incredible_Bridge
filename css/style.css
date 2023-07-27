@@ -466,3 +466,17 @@
   padding-right: 0;
   border-right: none;
 }
+/* visitors */
+.website-counter {
+  background-color: #86b817;
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
