@@ -24,19 +24,19 @@
 .btn-phone {
   position: fixed;
   right: 12px;
-  bottom: 150px;
+  bottom: 158px;
   z-index: 99;
 }
 .btn-mess {
   position: fixed;
   right: 12px;
-  bottom: 90px;
+  bottom: 98px;
   z-index: 99;
 }
 .btn-ig {
   position: fixed;
   right: 12px;
-  bottom: 30px;
+  bottom: 38px;
   z-index: 99;
 }
 .btn-lg-contact {
@@ -469,10 +469,9 @@
 /* visitors */
 .website-counter {
   background-color: #86b817;
-  height: 50px;
-  width: 50px;
+  height: auto;
+  width: auto;
   color: white;
-  border-radius: 50%;
   font-weight: 700;
   font-size: 25px;
   margin-top: 10px;

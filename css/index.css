@@ -246,7 +246,7 @@
   margin: 70px 0px;
   border-radius: 32px;
 }
-/* list product hot trend */
+/*  */
 .list-product-hottrend a:hover {
   color: #86b817;
 }
@@ -261,7 +261,7 @@
   border-radius: 12px 12px 0px 0px;
   height: 160px;
 }
-/* Tìm kính phù hợp */
+/* */
 .text-desc {
   inline-size: 500px;
   overflow-wrap: break-word;
@@ -287,48 +287,6 @@
 .map-bg {
   width: 100%;
   height: 500px;
-}
-/* Vũ trụ truyền thông */
-.social-desc {
-  font-weight: 350;
-  line-height: 24px;
-}
-.social-link-fb,
-.social-link-ig,
-.social-link-tiktok {
-  width: 230px;
-  height: 200px;
-}
-.social-link-fb {
-  top: 23%;
-  left: 6%;
-  background-color: #0d8ef1;
-  width: 230px;
-  height: 200px;
-}
-.social-link-ig {
-  top: -12%;
-  left: 58%;
-  background-image: linear-gradient(
-    to top right,
-    #e9875f,
-    #d75b65,
-    #ca4b8c,
-    #b93f9a,
-    #a93894
-  );
-}
-.social-link-tiktok {
-  top: 60%;
-  left: 58%;
-  background-image: linear-gradient(
-    to top left,
-    #bc0102,
-    #450100,
-    #000000,
-    #003938,
-    #00afae
-  );
 }
 
 /* photo library */
@@ -374,6 +332,58 @@
   color: rgb(255, 255, 255);
   background-color: #86b817;
   border-color: #86b817;
+}
+
+/* ads */
+.ads {
+  padding: 12px 11px;
+}
+.ads a img {
+  transition: 0.5s;
+}
+.ads a img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+/* location */
+#ticker-container {
+  background-color: #f0f0f0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+#ticker {
+  font-size: 18px;
+  line-height: 30px;
+  white-space: nowrap;
+}
+/* CSS location */
+@keyframes scrollingTicker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Style for the ticker container */
+#ticker-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-top: 5px;
+  z-index: 100;
+}
+/* Style for the ticker text */
+#ticker-text {
+  white-space: nowrap;
+  color: #000;
 }
 /* Responesive */
 /* mobile */
