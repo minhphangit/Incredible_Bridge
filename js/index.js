@@ -1,46 +1,179 @@
-// Code goes here
-// Code goes here
-function responsiveSlider() {
-  const slider = document.querySelector(".list-product");
-  let sliderWidth = slider.offsetWidth / 3;
-  const sliderList = document.querySelector(".slider-inner");
-  let items = sliderList.querySelectorAll(".slider-item").length - 2;
-  let count = 1;
+// slide Top Historical Bridge
+$(".slide-responsive").slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+      },
+    },
+  ],
+});
+// slide Top Symbol Bridge
+var curpage = 1;
+var sliding = false;
+var click = true;
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+var pagePrefix = "slide";
+var pageShift = 500;
+var transitionPrefix = "circle";
+var svg = true;
 
-  window.addEventListener("resize", function () {
-    sliderWidth = slider.offsetWidth;
-  });
-
-  function prevSlide() {
-    if (count > 1) {
-      count = count - 2;
-      sliderList.style.left = "-" + count * sliderWidth + "px";
-      count++;
-    } else if (count == 1) {
-      count = items - 1;
-      sliderList.style.left = "-" + count * sliderWidth + "px";
-      count++;
+function leftSlide() {
+  if (click) {
+    if (curpage == 1) curpage = 7;
+    console.log("woek");
+    sliding = true;
+    curpage--;
+    svg = true;
+    click = false;
+    for (k = 1; k <= 6; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
     }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= 6; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
   }
-  function nextSlide() {
-    if (count < items) {
-      sliderList.style.left = "-" + count * sliderWidth + "px";
-      count++;
-    } else if (count == items) {
-      sliderList.style.left = "0px";
-      count = 1;
-    }
-  }
-  prev.addEventListener("click", prevSlide);
-  next.addEventListener("click", nextSlide);
-  setInterval(function () {
-    nextSlide();
-  }, 3000);
 }
 
-window.onload = function () {
-  responsiveSlider();
+function rightSlide() {
+  if (click) {
+    if (curpage == 6) curpage = 0;
+    console.log("woek");
+    sliding = true;
+    curpage++;
+    svg = false;
+    click = false;
+    for (k = 1; k <= 6; k++) {
+      var a1 = document.getElementById(pagePrefix + k);
+      a1.className += " tran";
+    }
+    setTimeout(() => {
+      move();
+    }, 200);
+    setTimeout(() => {
+      for (k = 1; k <= 6; k++) {
+        var a1 = document.getElementById(pagePrefix + k);
+        a1.classList.remove("tran");
+      }
+    }, 1400);
+  }
+}
+
+function move() {
+  if (sliding) {
+    sliding = false;
+    if (svg) {
+      for (j = 1; j <= 9; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    } else {
+      for (j = 10; j <= 18; j++) {
+        var c = document.getElementById(transitionPrefix + j);
+        c.classList.remove("steap");
+        c.setAttribute("class", transitionPrefix + j + " streak");
+        console.log("streak");
+      }
+    }
+    setTimeout(() => {
+      for (i = 1; i <= 6; i++) {
+        if (i == curpage) {
+          var a = document.getElementById(pagePrefix + i);
+          a.className += " up1";
+        } else {
+          var b = document.getElementById(pagePrefix + i);
+          b.classList.remove("up1");
+        }
+      }
+      sliding = true;
+    }, 600);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
+
+    setTimeout(() => {
+      if (svg) {
+        for (j = 1; j <= 9; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+      } else {
+        for (j = 10; j <= 18; j++) {
+          var c = document.getElementById(transitionPrefix + j);
+          c.classList.remove("streak");
+          c.setAttribute("class", transitionPrefix + j + " steap");
+        }
+        sliding = true;
+      }
+    }, 850);
+    setTimeout(() => {
+      click = true;
+    }, 1700);
+  }
+}
+
+left.onmousedown = () => {
+  leftSlide();
 };
+
+right.onmousedown = () => {
+  rightSlide();
+};
+
+document.onkeydown = (e) => {
+  if (e.keyCode == 37) {
+    leftSlide();
+  } else if (e.keyCode == 39) {
+    rightSlide();
+  }
+};
+
+// Hàm để chuyển slide sang phải tự động
+function autoRightSlide() {
+  rightSlide();
+  setTimeout(autoRightSlide, 5000); // Gọi hàm autoRightSlide sau mỗi 3000 miliseconds (3 giây)
+}
+
+// Khởi động chuyển slide tự động sau khi trang tải xong
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(autoRightSlide, 3000); // Gọi hàm autoRightSlide sau khi trang tải xong và sau mỗi 3000 miliseconds (3 giây)
+});
+
 // location
 async function updateTicker() {
   const tickerElement = document.getElementById("ticker-text");
