@@ -190,7 +190,7 @@ async function updateTicker() {
 
         try {
           // Call the LocationIQ Geocoding API to get the location name
-          const apiKey = "pk.f38ff315feeca7c6d2068bd716da73ad";
+          // const apiKey = "pk.4736bfa859b144a51c14905763d1b8fd";
           const response = await fetch(
             `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&format=json`
           );
@@ -235,4 +235,4 @@ async function updateTicker() {
 updateTicker();
 
 // Call updateTicker every 60 seconds to update the date, time, and location
-setInterval(updateTicker, 1000);
+setInterval(updateTicker, 60000);
