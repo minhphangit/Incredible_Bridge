@@ -42,15 +42,27 @@
       href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -76,8 +88,7 @@
           <div class="d-inline-flex align-items-center" style="height: 45px">
             <small class="me-3 text-light"
               ><i class="fa fa-map-marker-alt me-2"></i>38 Yên Bái, Đà Nẵng
-              </small
-            >
+            </small>
             <small class="me-3 text-light"
               ><i class="fa fa-phone-alt me-2"></i>0346.123.456</small
             >
@@ -167,12 +178,14 @@
                 <a href="destination.html" class="dropdown-item">Destination</a>
                 <a href="booking.html" class="dropdown-item">Booking</a>
                 <a href="team.html" class="dropdown-item">Travel Guides</a>
-                <a href="feedback.html" class="dropdown-item">Customer Reviews</a>
-                
+                <a href="feedback.html" class="dropdown-item"
+                  >Customer Reviews</a
+                >
+
                 <a href="404page.html" class="dropdown-item">404 Page</a>
               </div>
             </div>
-            
+
             <a href="gallery.html" class="nav-item nav-link">Gallery</a>
             <a href="about.html" class="nav-item nav-link">About Us</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -193,12 +206,13 @@
               </p>
               <div class="position-relative w-75 mx-auto animated slideInDown">
                 <input
-                  id="globalSearchInput"
+                  id="search-item"
                   class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5"
                   type="text"
                   placeholder="Eg: Việt Nam "
                 />
                 <button
+                  onclick="searchAndRedirect();"
                   type="button"
                   class="btn btn-primary btn-search-info rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2"
                   style="margin-top: 7px"
@@ -212,12 +226,14 @@
       </div>
     </div>
     <!-- Navbar & Hero End -->
-  
+
     <!-- Top Symbol Bridge -->
-    <div class="list-product-bottom container-wrapper ">
+    <div class="list-product-bottom container-wrapper">
       <div class="list-title pt-4 wow fadeInUp" data-wow-delay="0.1s">
-        <h2 class="mb-2 text-white">Top Symbol Bridges</h2> 
-        <span class="pt-5 fs-5 text-white">Creative Essence - Eternal Symbol Bridges!</span>
+        <h2 class="mb-2 text-white">Top Symbol Bridges</h2>
+        <span class="pt-5 fs-5 text-white"
+          >Creative Essence - Eternal Symbol Bridges!</span
+        >
       </div>
       <div class="parent wow zoomIn" data-wow-delay="0.1s">
         <div class="slider-circle">
@@ -416,39 +432,48 @@
               r="660"
             />
           </svg>
-          <div id="slide1" class="slide1 up1 position-relative">Dragon Bridge - Vietnam</div>
+          <div id="slide1" class="slide1 up1 position-relative">
+            Dragon Bridge - Vietnam
+          </div>
           <div id="slide2" class="slide2">Tower Bridge - England</div>
           <div id="slide3" class="slide3">Golden Gate Bridge - America</div>
-          <div id="slide4" class="slide4">Sydney Harbour Bridge - Australia</div>
+          <div id="slide4" class="slide4">
+            Sydney Harbour Bridge - Australia
+          </div>
           <div id="slide5" class="slide5">Akashi Kaikyo Bridge - Japan</div>
           <div id="slide6" class="slide6">Rialto Bridge - Italy</div>
         </div>
       </div>
     </div>
     <!-- top Symbol Bridge End -->
-    <!-- Top Historical Bridge -->
-    <div class="list-product-top container-wrapper">
-      <div class="list-title pt-4">
-        <h2 class="mb-2 text-white">Top Historical Bridges</h2>
-        <span class="pt-5 fs-5 sub-tilte text-white "
-          >Famous and historically important Bridges
-        </span>
-      </div>
-     
-      <div class="slide-responsive py-4">
-          <div class="px-3">
+
+    <div id="product-list">
+      <!-- Top Historical Bridge -->
+      <div class="list-product-top container-wrapper">
+        <div class="list-title pt-4">
+          <h2 class="mb-2 text-white">Top Historical Bridges</h2>
+          <span class="pt-5 fs-5 sub-tilte text-white"
+            >Famous and historically important Bridges
+          </span>
+        </div>
+
+        <div class="slide-responsive py-4">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img1.jpg"
                   class="card-img-top card-img"
                   alt="Bridge Rialto"
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Rialto Bridge</h5>
-                  <p class="card-text  ms-1">
+                  <h5 class="card-title">Rialto Bridge</h5>
+                  <p class="card-text ms-1">
                     The most famous of the four Bridge that cross the canal
-                     Grand Canal in Venice, Italy
+                    Grand Canal in Venice, Italy
                   </p>
                   <a
                     href="#"
@@ -460,9 +485,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img2.jpg"
                   class="card-img-top card-img"
@@ -470,9 +498,9 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Tower Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The Bridge tree combines Hanging Bridge and Lifting Bridge across the River Thames in
-                     London, England
+                  <p class="card-text ms-1">
+                    The Bridge tree combines Hanging Bridge and Lifting Bridge
+                    across the River Thames in London, England
                   </p>
                   <a
                     href="#"
@@ -484,19 +512,22 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/baner1.jpg"
                   class="card-img-top card-img"
                   alt="Golden Gate Bridge"
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title ">Golden Gate Bridge </h5>
-                  <p class="card-text  ms-1">
-                    Bridge hanging over the Golden Gate Strait, connecting the city
-                     San Francisco with Marin County, California
+                  <h5 class="card-title">Golden Gate Bridge</h5>
+                  <p class="card-text ms-1">
+                    Bridge hanging over the Golden Gate Strait, connecting the
+                    city San Francisco with Marin County, California
                   </p>
                   <a
                     href="#"
@@ -508,9 +539,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img3.jpg"
                   class="card-img-top card-img"
@@ -518,7 +552,10 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Brooklyn Bridge</h5>
-                  <p class="card-text ms-1">The world's first Suspension Bridge were constructed of steel.Bridge spans the East River, connecting the two boroughs of Manhattan and Brooklyn in New York City.
+                  <p class="card-text ms-1">
+                    The world's first Suspension Bridge were constructed of
+                    steel.Bridge spans the East River, connecting the two
+                    boroughs of Manhattan and Brooklyn in New York City.
                   </p>
                   <a
                     href="#"
@@ -530,9 +567,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img3.jpg"
                   class="card-img-top card-img"
@@ -540,10 +580,10 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Sydney Bridge</h5>
-                  <p class="card-text  ms-1">
+                  <p class="card-text ms-1">
                     Steel bridge over Sydney Harbor in Sydney, Australia. Bridge
-                       was inaugurated in 1932 and is one of the Bridge
-                       most famous in the world.
+                    was inaugurated in 1932 and is one of the Bridge most famous
+                    in the world.
                   </p>
                   <a
                     href="#"
@@ -555,9 +595,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img5.jpg"
                   class="card-img-top card-img"
@@ -565,9 +608,9 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Pont du Gard Bridge</h5>
-                  <p class="card-text  ms-1">
+                  <p class="card-text ms-1">
                     Bridge Pont du Gard is an impressive engineering work of La
-                     Ancient code, supplying water to the city of Nîmes.
+                    Ancient code, supplying water to the city of Nîmes.
                   </p>
                   <a
                     href="#"
@@ -579,9 +622,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img6.webp"
                   class="card-img-top card-img"
@@ -589,12 +635,12 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Magdeburg Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The Bridge tree is unique because it's made of water! Bridge Magdeburg ends
-                     connecting the Elbe-Havel and Mittellandkanal canals,
-                     allow the passage of goods between Berlin and the ports
-                     along the Rhine without having to take the extra 7.5 miles
-                     ring
+                  <p class="card-text ms-1">
+                    The Bridge tree is unique because it's made of water! Bridge
+                    Magdeburg ends connecting the Elbe-Havel and Mittellandkanal
+                    canals, allow the passage of goods between Berlin and the
+                    ports along the Rhine without having to take the extra 7.5
+                    miles ring
                   </p>
                   <a
                     href="#"
@@ -606,19 +652,22 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img7.webp"
                   class="card-img-top card-img"
                   alt="Stari Most Bridge"
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title">Stari Most Bridge </h5>
-                  <p class="card-text  ms-1">
-                    The famous Bridge tree crossing the Naretva River in the city of Mostar
-                     of Bosnia and Herzegovina.
+                  <h5 class="card-title">Stari Most Bridge</h5>
+                  <p class="card-text ms-1">
+                    The famous Bridge tree crossing the Naretva River in the
+                    city of Mostar of Bosnia and Herzegovina.
                   </p>
                   <a
                     href="#"
@@ -630,20 +679,23 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img8.webp"
                   class="card-img-top card-img"
                   alt="Saint-Bénezet Bridge"
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title">Saint-Bénezet Bridge </h5>
-                  <p class="card-text  ms-1">
-                    The broken Bridge tree is located in the historic district of Avignon.
-                    Originally, Bridge was built between 1171
-                    in 1185, crossed the Rhône to connect Avignon with
+                  <h5 class="card-title">Saint-Bénezet Bridge</h5>
+                  <p class="card-text ms-1">
+                    The broken Bridge tree is located in the historic district
+                    of Avignon. Originally, Bridge was built between 1171 in
+                    1185, crossed the Rhône to connect Avignon with
                     Villeneuve-les-Avignon.
                   </p>
                   <a
@@ -656,9 +708,12 @@
             </a>
           </div>
 
-          <div class="px-3">
+          <div class="product px-3">
             <a href="#!">
-              <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="card overflow-hidden wow zoomIn"
+                data-wow-delay="0.1s"
+              >
                 <img
                   src="img/img3.jpg"
                   class="card-img-top card-img"
@@ -666,51 +721,10 @@
                 />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
                   <h5 class="card-title">Sydney Bridge</h5>
-                  <p class="card-text  ms-1">
+                  <p class="card-text ms-1">
                     Steel Bridge over Sydney Harbor in Sydney, Australia. Bridge
-                     was inaugurated in 1932 and is one of the Bridges
-                     most famous in the world.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-        
-
-        <!-- <a href="#!" id="prev"><i class="fas fa-angle-left slick-prev slick-arrow" ></i></a>
-        <a href="#!" id="next"><i class="fas fa-angle-right slick-next slick-arrow"></i></a> -->
-      </div>
-    </div>
-   
-    <!-- Top Modern Bridge nhất trên thế giới -->
-    <div class="list-product-top list-product-bottom container-wrapper">
-      <div class="list-title pt-4 wow fadeInUp" data-wow-delay="0.1s">
-        <h2 class="mb-2 text-white">Top Modern Bridges</h2>
-        <span class="pt-5 fs-5 sub-title text-white "
-          >Amazing and impressive engineering works all over the Bridges.
-        </span>
-      </div>
-
-      <div class="list-product-hottrend">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-3 mb-0">
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/h2.jpg"
-                  class="card-img-top card-img"
-                  alt="Danyang-Kunshan Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Danyang-Kunshan Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The longest reinforced concrete cable-stayed bridge in the world with a total of
-                     length is about 164.8 km
+                    was inaugurated in 1932 and is one of the Bridges most
+                    famous in the world.
                   </p>
                   <a
                     href="#"
@@ -722,303 +736,443 @@
             </a>
           </div>
 
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/h3.jpg"
-                  class="card-img-top card-img"
-                  alt="Millau Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title">Millau Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The reinforced concrete cable-stayed bridge crosses the valley
-                     Tarn. With the world's tallest cable-stayed section, this Bridge creates
-                     a modern architectural masterpiece and was completed in
-                     2004.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/hd1.jpg"
-                  class="card-img-top card-img"
-                  alt="Akashi-Kaikyō Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title">Akashi-Kaikyō Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The world's longest steel cable-stayed bridge when completed
-                     in 1998. Designed to withstand extreme loads from
-                     earthquakes and hurricanes, this Bridge represents progress beyond
-                     level of Japanese engineering.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/img6.webp"
-                  class="card-img-top card-img"
-                  alt="Øresund Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Øresund Bridge</h5>
-                  <p class="card-text  ms-1">
-                    This Bridge is one of the modern cable-stayed Bridges that have
-                     Unique combination of Bridge and underground tunnel.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/hd4.jpg"
-                  class="card-img-top card-img"
-                  alt="Siduhe Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Siduhe Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The longest and tallest reinforced concrete cable-stayed bridge in the world
-                     world upon completion in 2009. Bridge Siduhe represents the
-                     China's influence in the field of bridge construction
-                     dominant.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/hd5.jpg"
-                  class="card-img-top card-img"
-                  alt="Rion-Antirion Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Rion-Antirion Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The reinforced concrete cable-stayed bridge connects the province
-                     Peloponnese with mainland Greece. Completed in 2004, the tree
-                     This bridge is a modern architectural wonder and surpasses the turn
-                     extreme weather changes.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/hd6.jpg"
-                  class="card-img-top card-img"
-                  alt="Russky Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Russky Bridge</h5>
-                  <p class="card-text  ms-1">
-                    The reinforced concrete cable-stayed bridge connects the islands
-                     Russky and Shkot. Completed in 2012, this Bridge is
-                     Designed to withstand extreme loads from earthquakes and windstorms.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col d-flex justify-content-center modern-item mb-3 wow zoomIn" data-wow-delay="0.1s">
-            <a href="#!">
-              <div class="card p-0 overflow-hidden" style="width: 15rem; height: 22rem">
-                <img
-                  src="img/hd7.jpg"
-                  class="card-img-top card-img"
-                  alt="Ponte della Bridge"
-                />
-                <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
-                  <h5 class="card-title"> Ponte della Bridge</h5>
-                  <p class="card-text  ms-1">
-                    Road Bridge tree in eastern China's Shandong province. Bridge
-                     Crossing Giao Chau Bay, connecting Hoang Dao district and the city
-                     Qingdao and Hongdao peninsula.
-                  </p>
-                  <a
-                    href="#"
-                    class="btn btn-success btn-add-cart text-white bg-main-color border-0"
-                    >Learn more</a
-                  >
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        
-        <div class="d-flex justify-content-center pb-3">
-          <a href="#!" class="btn btn-dark btn-add-cart ">VIEW ALL</a>
+          <!-- <a href="#!" id="prev"><i class="fas fa-angle-left slick-prev slick-arrow" ></i></a>
+            <a href="#!" id="next"><i class="fas fa-angle-right slick-next slick-arrow"></i></a> -->
         </div>
       </div>
-    </div>
-<!-- Thành tựu -->
-<div class="achievement container-wrapper">
-  <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-    <h6 class="section-title bg-white text-center text-primary px-3">
-      Achievement
-    </h6>
-    <h2 class="mb-5">Great Achievements from Connecting Bridges!</h2>
-  </div>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3 mt-4">
-    <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
-      <img class="img-fluid img-baner " src="img/tt1.jpg" alt="The longest bridge in the world" />
-    </div>
-    <div class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.1s">
+      <!-- Top Modern Bridge nhất trên thế giới -->
+      <div class="list-product-top list-product-bottom container-wrapper">
+        <div class="list-title pt-4 wow fadeInUp" data-wow-delay="0.1s">
+          <h2 class="mb-2 text-white">Top Modern Bridges</h2>
+          <span class="pt-5 fs-5 sub-title text-white"
+            >Amazing and impressive engineering works all over the Bridges.
+          </span>
+        </div>
 
-      <div class="rounded-pill bg-main-color d-flex align-items-center justify-content-center" style="width: 90px; height: 90px">
-        <i class="fa-solid fa-ruler-horizontal fs-1 text-white"></i>
+        <div class="list-product-hottrend">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-3 mb-0">
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/h2.jpg"
+                    class="card-img-top card-img"
+                    alt="Danyang-Kunshan Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Danyang-Kunshan Bridge</h5>
+                    <p class="card-text ms-1">
+                      The longest reinforced concrete cable-stayed bridge in the
+                      world with a total of length is about 164.8 km
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/h3.jpg"
+                    class="card-img-top card-img"
+                    alt="Millau Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Millau Bridge</h5>
+                    <p class="card-text ms-1">
+                      The reinforced concrete cable-stayed bridge crosses the
+                      valley Tarn. With the world's tallest cable-stayed
+                      section, this Bridge creates a modern architectural
+                      masterpiece and was completed in 2004.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/hd1.jpg"
+                    class="card-img-top card-img"
+                    alt="Akashi-Kaikyō Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Akashi-Kaikyō Bridge</h5>
+                    <p class="card-text ms-1">
+                      The world's longest steel cable-stayed bridge when
+                      completed in 1998. Designed to withstand extreme loads
+                      from earthquakes and hurricanes, this Bridge represents
+                      progress beyond level of Japanese engineering.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/img6.webp"
+                    class="card-img-top card-img"
+                    alt="Øresund Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Øresund Bridge</h5>
+                    <p class="card-text ms-1">
+                      This Bridge is one of the modern cable-stayed Bridges that
+                      have Unique combination of Bridge and underground tunnel.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/hd4.jpg"
+                    class="card-img-top card-img"
+                    alt="Siduhe Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Siduhe Bridge</h5>
+                    <p class="card-text ms-1">
+                      The longest and tallest reinforced concrete cable-stayed
+                      bridge in the world world upon completion in 2009. Bridge
+                      Siduhe represents the China's influence in the field of
+                      bridge construction dominant.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/hd5.jpg"
+                    class="card-img-top card-img"
+                    alt="Rion-Antirion Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Rion-Antirion Bridge</h5>
+                    <p class="card-text ms-1">
+                      The reinforced concrete cable-stayed bridge connects the
+                      province Peloponnese with mainland Greece. Completed in
+                      2004, the tree This bridge is a modern architectural
+                      wonder and surpasses the turn extreme weather changes.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/hd6.jpg"
+                    class="card-img-top card-img"
+                    alt="Russky Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Russky Bridge</h5>
+                    <p class="card-text ms-1">
+                      The reinforced concrete cable-stayed bridge connects the
+                      islands Russky and Shkot. Completed in 2012, this Bridge
+                      is Designed to withstand extreme loads from earthquakes
+                      and windstorms.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="product col d-flex justify-content-center modern-item mb-3 wow zoomIn"
+              data-wow-delay="0.1s"
+            >
+              <a href="#!">
+                <div
+                  class="card p-0 overflow-hidden"
+                  style="width: 15rem; height: 22rem"
+                >
+                  <img
+                    src="img/hd7.jpg"
+                    class="card-img-top card-img"
+                    alt="Ponte della Bridge"
+                  />
+                  <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="card-title">Ponte della Bridge</h5>
+                    <p class="card-text ms-1">
+                      Road Bridge tree in eastern China's Shandong province.
+                      Bridge Crossing Giao Chau Bay, connecting Hoang Dao
+                      district and the city Qingdao and Hongdao peninsula.
+                    </p>
+                    <a
+                      href="#"
+                      class="btn btn-success btn-add-cart text-white bg-main-color border-0"
+                      >Learn more</a
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center pb-3">
+            <a href="#!" class="btn btn-dark btn-add-cart">VIEW ALL</a>
+          </div>
+        </div>
       </div>
 
-      <h2 class="text-center fw-bold my-3 main-color">The longest bridge in the world</h3>
+      <!-- Thành tựu -->
+      <div class="achievement container-wrapper">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Achievement
+          </h6>
+          <h2 class="mb-5">Great Achievements from Connecting Bridges!</h2>
+        </div>
 
-      <p class="text-center text-desc mb-3 fs-5">
-        Dan Duong-Con Son Bridge is the longest bridge in the world. The dry bridge has a total length of 164.8 km on the Beijing - Shanghai high-speed railway.
-      </p>
-      <span>
-        <a href="#!" class=" fs-5 fw-bold">
-          Learn more
-          <i class="fa-solid fa-arrow-right-long ms-2"></i>
-        </a>
+        <div
+          class="product row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3 mt-4"
+        >
+          <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
+            <img
+              class="img-fluid img-baner"
+              src="img/tt1.jpg"
+              alt="The longest bridge in the world"
+            />
+          </div>
+          <div
+            class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div
+              class="rounded-pill bg-main-color d-flex align-items-center justify-content-center"
+              style="width: 90px; height: 90px"
+            >
+              <i class="fa-solid fa-ruler-horizontal fs-1 text-white"></i>
+            </div>
 
-      </span>
-    </div>
-  </div>
+            <h5 class="text-center fw-bold my-3 main-color fs-2">
+              The longest bridge in the world
+            </h5>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3">
-    <div class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.1s">
+            <p class="text-center text-desc mb-3 fs-5">
+              Dan Duong-Con Son Bridge is the longest bridge in the world. The
+              dry bridge has a total length of 164.8 km on the Beijing -
+              Shanghai high-speed railway.
+            </p>
+            <span>
+              <a href="#!" class="fs-5 fw-bold">
+                Learn more
+                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </a>
+            </span>
+          </div>
+        </div>
 
-      <div class="rounded-pill bg-main-color d-flex align-items-center justify-content-center" style="width: 90px; height: 90px">
-        <i class="fa-solid fa-arrow-up-short-wide fs-1 text-white"></i>
+        <div class="product row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3">
+          <div
+            class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div
+              class="rounded-pill bg-main-color d-flex align-items-center justify-content-center"
+              style="width: 90px; height: 90px"
+            >
+              <i class="fa-solid fa-arrow-up-short-wide fs-1 text-white"></i>
+            </div>
+
+            <h5 class="text-center fw-bold my-3 main-color fs-2">
+              Bridge has the tallest column in the world
+            </h5>
+
+            <p class="text-center text-desc mb-3 fs-5">
+              Bridge to Millau is considered the bridge with the highest columns
+              in the world with the highest point of the Bridge up to 343m.
+            </p>
+            <span>
+              <a href="#!" class="fs-5 fw-bold">
+                Learn more
+                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </a>
+            </span>
+          </div>
+
+          <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
+            <img
+              class="img-fluid img-baner"
+              src="img/tt2.jpg"
+              alt="Bridge has the tallest column in the world"
+            />
+          </div>
+        </div>
+
+        <div class="product row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3">
+          <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
+            <img
+              class="img-fluid img-baner"
+              src="img/tt3.jpg"
+              alt="The highest bridge above sea level"
+            />
+          </div>
+          <div
+            class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div
+              class="rounded-pill bg-main-color d-flex align-items-center justify-content-center"
+              style="width: 90px; height: 90px"
+            >
+              <i
+                class="fa-solid fa-arrow-up-from-water-pump fs-1 text-white"
+              ></i>
+            </div>
+
+            <h5 class="text-center fw-bold my-3 main-color fs-2">
+              The highest bridge above sea level
+            </h5>
+
+            <p class="text-center text-desc mb-3 fs-5">
+              Bac Ban Giang Bridge is the tallest cable-stayed bridge in the
+              world since 2016, with an altitude of 565 meters above sea level.
+            </p>
+            <span>
+              <a href="#!" class="fs-5 fw-bold">
+                Learn more
+                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="product row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3">
+          <div
+            class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div
+              class="rounded-pill bg-main-color d-flex align-items-center justify-content-center"
+              style="width: 90px; height: 90px"
+            >
+              <i class="fa-solid fa-hourglass-start fs-1 text-white"></i>
+            </div>
+
+            <h5 class="text-center fw-bold my-3 main-color fs-2">
+              World's oldest bridge
+            </h5>
+
+            <p class="text-center text-desc mb-3 fs-5">
+              Bridge Arkadiko is the oldest arch bridge in the world that still
+              exists and is still in use today. Bridge built between 1,300 and
+              1,190 BC in the Bronze Age of Greece
+            </p>
+            <span>
+              <a href="#!" class="fs-5 fw-bold">
+                Learn more
+                <i class="fa-solid fa-arrow-right-long ms-2"></i>
+              </a>
+            </span>
+          </div>
+
+          <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
+            <img
+              class="img-fluid img-baner"
+              src="img/tt4.jpg"
+              alt="World's oldest bridge "
+            />
+          </div>
+        </div>
       </div>
-
-      <h2 class=" text-center fw-bold my-3 main-color">Bridge has the tallest column in the world</h3>
-
-      <p class="text-center text-desc mb-3 fs-5">
-        Bridge to Millau is considered the bridge with the highest columns in the world with the highest point of the Bridge up to 343m.
-      </p>
-      <span>
-        <a href="#!" class=" fs-5 fw-bold">
-          Learn more
-          <i class="fa-solid fa-arrow-right-long ms-2"></i>
-        </a>
-
-      </span>
     </div>
 
-    <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
-      <img class="img-fluid img-baner" src="img/tt2.jpg" alt="Bridge has the tallest column in the world" />
-    </div>
-  </div>
-  
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 mb-3">
-    <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
-      <img class="img-fluid img-baner" src="img/tt3.jpg" alt="The highest bridge above sea level" />
-    </div>
-    <div class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.1s">
-
-      <div class="rounded-pill bg-main-color d-flex align-items-center justify-content-center" style="width: 90px; height: 90px">
-        <i class="fa-solid fa-arrow-up-from-water-pump fs-1 text-white"></i>
-      </div>
-
-      <h2 class="text-center fw-bold my-3 main-color">The highest bridge above sea level</h3>
-
-      <p class="text-center text-desc mb-3 fs-5">
-        Bac Ban Giang Bridge is the tallest cable-stayed bridge in the world since 2016, with an altitude of 565 meters above sea level.
-      </p>
-      <span>
-        <a href="#!" class=" fs-5 fw-bold">
-          Learn more
-          <i class="fa-solid fa-arrow-right-long ms-2"></i>
-        </a>
-
-      </span>
-    </div>
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2  mb-3">
-    <div class="col choose-glass-text d-flex flex-column justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.1s">
-
-      <div class="rounded-pill bg-main-color d-flex align-items-center justify-content-center" style="width: 90px; height: 90px">
-        <i class="fa-solid fa-hourglass-start fs-1 text-white"></i>
-      </div>
-
-      <h2 class="text-center fw-bold my-3 main-color">World's oldest bridge </h3>
-
-      <p class="text-center text-desc mb-3 fs-5">
-        Bridge Arkadiko is the oldest arch bridge in the world that still exists and is still in use today.
-        Bridge built between 1,300 and 1,190 BC in the Bronze Age of Greece
-      </p>
-      <span>
-        <a href="#!" class=" fs-5 fw-bold">
-          Learn more
-          <i class="fa-solid fa-arrow-right-long ms-2"></i>
-        </a>
-
-      </span>
-    </div>
-
-    <div class="col wow zoomIn overflow-hidden" data-wow-delay="0.1s">
-      <img class="img-fluid img-baner" src="img/tt4.jpg" alt="World's oldest bridge " />
-    </div>
-  </div>
-
-</div>
     <!-- Destination Start -->
     <div class="container-xxl py-5 destination">
       <div class="container">
@@ -1033,7 +1187,11 @@
             <div class="row g-3">
               <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/baner2.jpg" alt="Tower Bridge" />
+                  <img
+                    class="img-fluid"
+                    src="img/baner2.jpg"
+                    alt="Tower Bridge"
+                  />
                   <div
                     class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
                   >
@@ -1048,7 +1206,11 @@
               </div>
               <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/baner1.jpg" alt="Golden Gate Bridge" />
+                  <img
+                    class="img-fluid"
+                    src="img/baner1.jpg"
+                    alt="Golden Gate Bridge"
+                  />
                   <div
                     class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
                   >
@@ -1057,13 +1219,17 @@
                   <div
                     class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
                   >
-                  San Francisco - American
+                    San Francisco - American
                   </div>
                 </a>
               </div>
               <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                 <a class="position-relative d-block overflow-hidden" href="">
-                  <img class="img-fluid" src="img/img4.JPG" alt=" Bixby Creek Bridge" />
+                  <img
+                    class="img-fluid"
+                    src="img/img4.JPG"
+                    alt=" Bixby Creek Bridge"
+                  />
                   <div
                     class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
                   >
@@ -1072,7 +1238,7 @@
                   <div
                     class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
                   >
-                  Sydney - Australia
+                    Sydney - Australia
                   </div>
                 </a>
               </div>
@@ -1098,7 +1264,7 @@
               <div
                 class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
               >
-              Kobe - Japan
+                Kobe - Japan
               </div>
             </a>
           </div>
@@ -1120,13 +1286,17 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="package-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/img2.jpg" alt="London - England" />
+                <img
+                  class="img-fluid"
+                  src="img/img2.jpg"
+                  alt="London - England"
+                />
               </div>
               <div class="d-flex border-bottom">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-map-marker-alt text-primary me-2"></i
-                  >London - England </small
-                >
+                  ><i class="fa fa-map-marker-alt text-primary me-2"></i>London
+                  - England
+                </small>
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-calendar-alt text-primary me-2"></i>3
                   days</small
@@ -1145,7 +1315,8 @@
                   <small class="fa fa-star text-primary"></small>
                 </div>
                 <p>
-                  Explore the history and immerse yourself in the sublimation at Bridge Tower Bridge
+                  Explore the history and immerse yourself in the sublimation at
+                  Bridge Tower Bridge
                 </p>
                 <div class="d-flex justify-content-center mb-2">
                   <a
@@ -1167,12 +1338,16 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="package-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/baner1.jpg" alt="San Francisco - American" />
+                <img
+                  class="img-fluid"
+                  src="img/baner1.jpg"
+                  alt="San Francisco - American"
+                />
               </div>
               <div class="d-flex border-bottom">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-map-marker-alt text-primary me-2"></i
-                  >San Francisco - American</small
+                  ><i class="fa fa-map-marker-alt text-primary me-2"></i>San
+                  Francisco - American</small
                 >
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-calendar-alt text-primary me-2"></i>3
@@ -1191,7 +1366,9 @@
                   <small class="fa fa-star text-primary"></small>
                   <small class="fa fa-star text-primary"></small>
                 </div>
-                <p>Flying high with the Golden Bridge, San Francisco welcomes great moments!
+                <p>
+                  Flying high with the Golden Bridge, San Francisco welcomes
+                  great moments!
                 </p>
                 <div class="d-flex justify-content-center mb-2">
                   <a
@@ -1213,12 +1390,16 @@
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="package-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/baner3.jpg" alt="Kobe - Japan" />
+                <img
+                  class="img-fluid"
+                  src="img/baner3.jpg"
+                  alt="Kobe - Japan"
+                />
               </div>
               <div class="d-flex border-bottom">
                 <small class="flex-fill text-center border-end py-2"
-                  ><i class="fa fa-map-marker-alt text-primary me-2"></i
-                  >Kobe - Japan</small
+                  ><i class="fa fa-map-marker-alt text-primary me-2"></i>Kobe -
+                  Japan</small
                 >
                 <small class="flex-fill text-center border-end py-2"
                   ><i class="fa fa-calendar-alt text-primary me-2"></i>3
@@ -1238,7 +1419,8 @@
                   <small class="fa fa-star text-primary"></small>
                 </div>
                 <p>
-                  Experience the greatness of Japanese engineering at the Akashi Kaikyo Bridge
+                  Experience the greatness of Japanese engineering at the Akashi
+                  Kaikyo Bridge
                 </p>
                 <div class="d-flex justify-content-center mb-2">
                   <a
@@ -1264,7 +1446,7 @@
     <div class="ads container-wrapper wow fadeInUp" data-wow-delay="0.1s">
       <div class="overflow-hidden">
         <a href="#!">
-          <img class="img-fluid" src="img/ads.gif" alt="Book flight">
+          <img class="img-fluid" src="img/ads.gif" alt="Book flight" />
         </a>
       </div>
     </div>
@@ -1278,12 +1460,11 @@
               <h2 class="text-white mb-4">Online Booking</h2>
               <p class="mb-4">
                 Explore the world easily and conveniently with ticket booking
-                 online - Start your journey now and create
-                 Priceless memories!
+                online - Start your journey now and create Priceless memories!
               </p>
               <p class="mb-4">
-                Online Booking - Explore the diverse world and save time
-                 time, make your own mark on your colorful journey!
+                Online Booking - Explore the diverse world and save time time,
+                make your own mark on your colorful journey!
               </p>
               <a class="btn btn-outline-light py-3 px-5 mt-2" href=""
                 >Learn more</a
@@ -1335,9 +1516,9 @@
                   <div class="col-md-6">
                     <div class="form-floating">
                       <select class="form-select bg-transparent" id="select1">
-                        <option value="1"> San Francisco - American</option>
-                        <option value="2"> London - Anh</option>
-                        <option value="3"> Kobe - Japan</option>
+                        <option value="1">San Francisco - American</option>
+                        <option value="2">London - Anh</option>
+                        <option value="3">Kobe - Japan</option>
                       </select>
                       <label for="select1">Destination</label>
                     </div>
@@ -1372,7 +1553,7 @@
     <div class="ads container-wrapper wow fadeInUp" data-wow-delay="0.1s">
       <div class="overflow-hidden">
         <a href="#!">
-          <img class="img-fluid" src="img/ad_bus.gif" alt="Book Bus">
+          <img class="img-fluid" src="img/ad_bus.gif" alt="Book Bus" />
         </a>
       </div>
     </div>
@@ -1401,7 +1582,8 @@
               <hr class="w-25 mx-auto bg-primary mb-1" />
               <hr class="w-50 mx-auto bg-primary mt-0" />
               <p class="mb-0">
-                Choose A Destination - Unleash a promising adventure, enjoy memorable moments in your heart!
+                Choose A Destination - Unleash a promising adventure, enjoy
+                memorable moments in your heart!
               </p>
             </div>
           </div>
@@ -1420,7 +1602,8 @@
               <hr class="w-25 mx-auto bg-primary mb-1" />
               <hr class="w-50 mx-auto bg-primary mt-0" />
               <p class="mb-0">
-                Explore the world, complete journey, easy online payment - Light in your pocket, most convenient!
+                Explore the world, complete journey, easy online payment - Light
+                in your pocket, most convenient!
               </p>
             </div>
           </div>
@@ -1439,7 +1622,8 @@
               <hr class="w-25 mx-auto bg-primary mb-1" />
               <hr class="w-50 mx-auto bg-primary mt-0" />
               <p class="mb-0">
-                Fly Today - Discover countless flights that will take you to amazing lands at your fingertips!
+                Fly Today - Discover countless flights that will take you to
+                amazing lands at your fingertips!
               </p>
             </div>
           </div>
@@ -1461,7 +1645,11 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="team-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv1.jpg" alt="tour guide handsome" />
+                <img
+                  class="img-fluid"
+                  src="img/hdv1.jpg"
+                  alt="tour guide handsome"
+                />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -1486,7 +1674,11 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="team-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv3.jpg" alt="tour guide beautiful girl" />
+                <img
+                  class="img-fluid"
+                  src="img/hdv3.jpg"
+                  alt="tour guide beautiful girl"
+                />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -1503,7 +1695,7 @@
                 ></a>
               </div>
               <div class="text-center p-4">
-                <h5 class="mb-0"> Lê Thị Khánh Huyền</h5>
+                <h5 class="mb-0">Lê Thị Khánh Huyền</h5>
                 <small>Pretty, enthusiastic, cheerful</small>
               </div>
             </div>
@@ -1511,7 +1703,11 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="team-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv4.jpg" alt="tour guide beautiful girl" />
+                <img
+                  class="img-fluid"
+                  src="img/hdv4.jpg"
+                  alt="tour guide beautiful girl"
+                />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -1536,7 +1732,11 @@
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
             <div class="team-item">
               <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv2.jpg" alt="tour guide handsome" />
+                <img
+                  class="img-fluid"
+                  src="img/hdv2.jpg"
+                  alt="tour guide handsome"
+                />
               </div>
               <div
                 class="position-relative d-flex justify-content-center"
@@ -1582,7 +1782,8 @@
             <h5 class="mb-0">John Đặng</h5>
             <p>New York, USA</p>
             <p class="mb-0">
-              Timeless wonder - Golden Gate Bridge: Exceeded expectations, conquered my heart!
+              Timeless wonder - Golden Gate Bridge: Exceeded expectations,
+              conquered my heart!
             </p>
           </div>
           <div class="testimonial-item bg-white text-center border p-4">
@@ -1594,7 +1795,8 @@
             <h5 class="mb-0">Trâm Anh</h5>
             <p>Đà Nẵng, Việt Nam</p>
             <p class="mt-2 mb-0">
-              Traveling to Da Nang is a wonderful experience from beautiful beaches to sacred temples
+              Traveling to Da Nang is a wonderful experience from beautiful
+              beaches to sacred temples
             </p>
           </div>
           <div class="testimonial-item bg-white text-center border p-4">
@@ -1606,7 +1808,8 @@
             <h5 class="mb-0">Akiko Fuji</h5>
             <p>Kobe, Japan</p>
             <p class="mt-2 mb-0">
-              High challenge, Akashi Kaikyo Bridge: A memorable experience with the feeling of reaching the top of the world.
+              High challenge, Akashi Kaikyo Bridge: A memorable experience with
+              the feeling of reaching the top of the world.
             </p>
           </div>
           <div class="testimonial-item bg-white text-center border p-4">
@@ -1618,7 +1821,8 @@
             <h5 class="mb-0">Jenny Huỳnh</h5>
             <p>London, England</p>
             <p class="mt-2 mb-0">
-              Discover ancient, history and exquisite beauty - The Bridge Tower Bridge is a charming destination not to be missed.
+              Discover ancient, history and exquisite beauty - The Bridge Tower
+              Bridge is a charming destination not to be missed.
             </p>
           </div>
         </div>
@@ -1636,7 +1840,7 @@
           <div class="col-lg-3 col-md-6">
             <h4 class="text-white mb-3">
               <a href="" class="navbar-brand p-0 text-primary">
-                  <i class="fa-solid fa-bridge-water "></i> Bridge
+                <i class="fa-solid fa-bridge-water"></i> Bridge
               </a>
             </h4>
             <a class="btn btn-link" href="">About Us</a>
@@ -1650,9 +1854,7 @@
             <p class="mb-2">
               <i class="fa fa-map-marker-alt me-3"></i>38 Yên Bái, Đà Nẵng
             </p>
-            <p class="mb-2">
-              <i class="fa fa-phone-alt me-3"></i>0346.123.456
-            </p>
+            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0346.123.456</p>
             <p class="mb-2">
               <i class="fa fa-envelope me-3"></i>minhduc@gmail.com
             </p>
@@ -1669,15 +1871,13 @@
               <a class="btn btn-outline-light btn-social" href=""
                 ><i class="fab fa-linkedin-in"></i
               ></a>
-              
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-white mb-3">Visitors</h4>
-            <div class="row g-2 pt-2 justify-content-evenly pe-5 ">
+            <div class="row g-2 pt-2 justify-content-evenly pe-5">
               <span>Number of website visitors</span>
-              <div class="col-4 website-counter">
-              </div>
+              <div class="col-4 website-counter"></div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -1698,19 +1898,17 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
       <div class="container pb-3">
         <div class="copyright">
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">minhduc.vn</a>, All
-              Right Reserved.
-              Designed By
+              &copy; <a class="border-bottom" href="#">minhduc.vn</a>, All Right
+              Reserved. Designed By
               <a class="border-bottom" href="#!"
                 >Minh & Đức - Project HTML AP34</a
               >
             </div>
-            
           </div>
         </div>
       </div>
@@ -1718,26 +1916,33 @@
     <div id="ticker-container">
       <div id="ticker-text"></div>
     </div>
-     
+
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary glow-on-hover btn-lg-square rounded-circle back-to-top"
+    <a
+      href="#"
+      class="btn btn-lg btn-primary glow-on-hover btn-lg-square rounded-circle back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
-    
-    <a href="#!" class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-phone"
+
+    <a
+      href="#!"
+      class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-phone"
       ><i class="fa-solid fa-phone-volume"></i>
     </a>
 
-    <a href="#!" class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-mess"
+    <a
+      href="#!"
+      class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-mess"
       ><i class="fa-brands fa-facebook-messenger"></i>
     </a>
 
-    <a href="#!" class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-ig"
+    <a
+      href="#!"
+      class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-ig"
       ><i class="fa-brands fa-instagram"></i>
     </a>
-      
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -1749,8 +1954,18 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+      integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Template Javascript -->
 
     <script src="js/index.js"></script>

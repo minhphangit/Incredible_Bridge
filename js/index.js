@@ -237,4 +237,54 @@ updateTicker();
 // Call updateTicker every 60 seconds to update the date, time, and location
 setInterval(updateTicker, 1000);
 
-// search
+//search
+const search = () => {
+  const searchbox = document.getElementById("search-item").value.toUpperCase();
+  const storeitems = document.getElementById("product-list");
+  const product = document.querySelectorAll(".product");
+  const pname = storeitems.getElementsByTagName("h5");
+  for (const productItem of product) {
+    let matchH5 = productItem.querySelector("h5");
+    let matchP = productItem.querySelector("p");
+
+    if (matchH5 || matchP) {
+      let textvalueH5 = matchH5 ? matchH5.textContent || matchH5.innerHTML : "";
+      let textvalueP = matchP ? matchP.textContent || matchP.innerHTML : "";
+
+      if (
+        textvalueH5.toUpperCase().indexOf(searchbox) > -1 ||
+        textvalueP.toUpperCase().indexOf(searchbox) > -1
+      ) {
+        productItem.style.display = "";
+      } else {
+        productItem.style.display = "none";
+      }
+    }
+  }
+};
+
+const searchAndRedirect = () => {
+  // Thực hiện tìm kiếm
+  search();
+
+  // Lấy kết quả tìm kiếm để biết liệu có sản phẩm thỏa mãn hay không
+  const searchbox = document.getElementById("search-item").value;
+  const product = document.querySelectorAll(".product");
+  let foundProducts = [];
+
+  for (let i = 0; i < product.length; i++) {
+    if (product[i].style.display !== "none") {
+      foundProducts.push({
+        imgSrc: product[i].querySelector("img").src,
+        productName: product[i].querySelector("h5").textContent,
+        productDetails: product[i].querySelector("p").textContent,
+      });
+    }
+  }
+
+  // Chuyển hướng sang trang search.html và truyền kết quả tìm kiếm qua URL
+  const searchParams = new URLSearchParams();
+  searchParams.append("searchbox", searchbox);
+  searchParams.append("results", JSON.stringify(foundProducts));
+  window.location.href = `search.html?${searchParams.toString()}`;
+};
