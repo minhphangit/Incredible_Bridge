@@ -235,7 +235,7 @@ async function updateTicker() {
 updateTicker();
 
 // Call updateTicker every 60 seconds to update the date, time, and location
-setInterval(updateTicker, 1000);
+setInterval(updateTicker, 60000);
 
 //search
 const search = () => {
