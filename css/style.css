@@ -31,7 +31,7 @@
   position: fixed;
   right: 26px;
   bottom: 100px;
-  z-index: 99;
+  z-index: 0;
 }
 
 .btn-lg-contact {
@@ -49,7 +49,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
-  z-index: 99999;
+  z-index: 0;
 }
 
 #spinner.show {
@@ -315,6 +315,9 @@
 }
 
 /*** Testimonial ***/
+.testimonial-carousel {
+  z-index: 0 !important;
+}
 .testimonial-carousel::before {
   position: absolute;
   content: "";

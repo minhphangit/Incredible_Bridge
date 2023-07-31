@@ -89,6 +89,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 0px 0px 32px 32px;
+  z-index: 0;
 }
 svg {
   position: absolute;
@@ -284,7 +285,7 @@ circle {
   text-align: center;
   width: 25%;
   height: 100%;
-  z-index: 10;
+  z-index: 1;
   transition: 1.4s;
   text-transform: uppercase;
 }
