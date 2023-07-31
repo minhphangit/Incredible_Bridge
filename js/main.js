@@ -121,3 +121,10 @@ if (visitCount) {
   localStorage.setItem("page_view", 1);
 }
 counterContainer.innerHTML = visitCount;
+// contact
+$(document).ready(function () {
+  $("#callButton").on("click", function () {
+    var phoneNumber = "0346713864";
+    window.location.href = "tel:" + phoneNumber;
+  });
+});
