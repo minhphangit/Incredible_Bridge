@@ -23,8 +23,8 @@
 .back-to-top {
   position: fixed;
   display: none;
-  right: 26px;
-  bottom: 45px;
+  right: 78px;
+  bottom: 38px;
   z-index: 99;
 }
 .btn-phone {
