@@ -128,3 +128,55 @@ $(document).ready(function () {
     window.location.href = "tel:" + phoneNumber;
   });
 });
+
+// login & register
+const switchers = [...document.querySelectorAll(".switcher")];
+
+switchers.forEach((item) => {
+  item.addEventListener("click", function () {
+    switchers.forEach((item) =>
+      item.parentElement.classList.remove("is-active")
+    );
+    this.parentElement.classList.add("is-active");
+  });
+});
+// js check login and register
+function registerUser() {
+  const name = document.getElementById("Name").value;
+  const email = document.getElementById("registerEmail").value;
+  const mobile = document.getElementById("Mobile").value;
+  const password = document.getElementById("registerPassword").value;
+
+  // Check if the user already exists in localStorage
+  if (localStorage.getItem(email)) {
+    alert("User already exists. Please use a different email address.");
+    return;
+  }
+
+  // Create a user object and store it in localStorage
+  const user = {
+    name,
+    email,
+    mobile,
+    password,
+  };
+
+  localStorage.setItem(email, JSON.stringify(user));
+  alert("Registration successful. You can now log in.");
+}
+function loginUser() {
+  const loginEmail = document.getElementById("loginEmail").value;
+  const loginPassword = document.getElementById("loginPassword").value;
+
+  // Check if the user exists in localStorage
+  const user = JSON.parse(localStorage.getItem(loginEmail));
+  if (user && user.password === loginPassword) {
+    alert("Login successful. Welcome, " + user.name + "!");
+    // Implement your logic here for a logged-in user, such as redirecting to a member page
+    // Optionally, you can store the logged-in user's information in localStorage for later use
+    localStorage.setItem("loggedInUser", loginEmail);
+    document.getElementById("loginButton").innerText = user.name;
+  } else {
+    alert("Invalid email address or password. Please try again.");
+  }
+}

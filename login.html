@@ -48,7 +48,6 @@
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="css/index.css" />
-
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -167,10 +166,11 @@
                 <a href="feedback.html" class="dropdown-item"
                   >Customer Reviews</a
                 >
-                <a href="404page.html" class="dropdown-item">404 Page</a>
+                <a href="404page.html" class="dropdown-item active">404 Page</a>
               </div>
             </div>
-            <a href="about.html" class="nav-item nav-link active">About Us</a>
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="about.html" class="nav-item nav-link">About Us</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
           <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4"
@@ -183,20 +183,17 @@
         <div class="container py-5">
           <div class="row justify-content-center py-5">
             <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-              <h2 class="display-3 text-white animated slideInDown">
-                About Us
-              </h2>
+              <h2 class="display-3 text-white animated slideInDown">Login</h2>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                   <li class="breadcrumb-item main-color">
                     <a href="#">Home</a>
                   </li>
-
                   <li
                     class="breadcrumb-item text-white active"
                     aria-current="page"
                   >
-                    About Us
+                    Login
                   </li>
                 </ol>
               </nav>
@@ -206,204 +203,122 @@
       </div>
     </div>
     <!-- Navbar & Hero End -->
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div
-            class="col-lg-6 wow fadeInUp"
-            data-wow-delay="0.1s"
-            style="min-height: 400px"
-          >
-            <div class="position-relative h-100">
-              <img
-                class="img-fluid position-absolute w-100 h-100"
-                src="img/cty.avif"
-                alt=""
-                style="object-fit: cover"
-              />
+    <div class="container container-wrapper">
+      <form class="form-signin rounded-sm shadow">
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills mb-4">
+          <li class="nav-item pill-1">
+            <a class="nav-link active rounded-0" data-toggle="tab" href="#login"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item pill-2">
+            <a class="nav-link rounded-0" data-toggle="tab" href="#register"
+              >Register</a
+            >
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!-- Tab1 -->
+          <div id="login" class="container tab-pane active">
+            <label for="loginEmail" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="loginEmail"
+              class="form-control mb-4"
+              placeholder="Email address"
+              required
+              autofocus
+            />
+            <label for="loginPassword" class="sr-only">Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              class="form-control mb-4"
+              placeholder="Password"
+              required
+            />
+            <div class="one-line mb-2">
+              <div class="checkbox">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked="checked"
+                    value="remember-me"
+                  />
+                  Remember me
+                </label>
+              </div>
+              <a class="forgot" href="#">Forgot password?</a>
             </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <h6 class="section-title bg-white text-start text-primary pe-3">
-              About Us
-            </h6>
-            <h2 class="mb-4">
-              Welcome to <span class="text-primary">Bridge</span>
-            </h2>
-            <p class="mb-4">
-              Bridge is a website that specializes in a particular field or goal
-              (e.g. cross-cultural exchanges, personality development,
-              sustainable tourism, etc.). This site is intended to provide
-              information, connect and create community for people with similar
-              interests likes, interests or goals.s
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="login-as-instructor" /> Login as
+                instructor
+              </label>
+            </div>
+            <button
+              class="btn btn-lg btn-login btn-block"
+              onclick="loginUser()"
+            >
+              Login
+            </button>
+            <p class="mt-4 mb-0 text-muted small">
+              Login now to Explore your dream destinations with Bridge Tour
             </p>
-            <p class="mb-4">
-              The goal of the Bridge site is to build a strong community and
-              trustworthy in his field or goal, facilitate facilitate learning,
-              exchange, and cooperation among members pellets. It hopes to
-              become a reliable resource and Destination is familiar to those
-              who are passionate and interested in the field the area or goal to
-              which it is directed.
+          </div>
+
+          <!-- Tab2 -->
+          <div id="register" class="container tab-pane fade">
+            <label for="Name" class="sr-only">Name</label>
+            <input
+              type="text"
+              id="Name"
+              class="form-control mb-4"
+              placeholder="Name"
+              required
+            />
+            <label for="registerEmail" class="sr-only">Email address</label>
+            <input
+              type="email"
+              id="registerEmail"
+              class="form-control mb-4"
+              placeholder="Email address"
+              required
+              autofocus
+            />
+            <label for="Mobile" class="sr-only">Mobile</label>
+            <input
+              type="tel"
+              id="Mobile"
+              class="form-control mb-4"
+              placeholder="Mobile"
+              required
+            />
+            <label for="registerPassword" class="sr-only">Password</label>
+            <input
+              type="password"
+              id="registerPassword"
+              class="form-control mb-4"
+              placeholder="Password"
+              required
+            />
+            <button
+              class="btn btn-lg btn-login btn-block"
+              onclick="registerUser()"
+            >
+              Register
+            </button>
+            <p class="mt-4 mb-0 text-muted small">
+              Register now to receive attractive offers from us
             </p>
-            <div class="row gy-2 gx-4 mb-4">
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>First Class
-                  Flights
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>Handpicked
-                  Hotels
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>5 Star
-                  Accommodations
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>Latest
-                  Model Vehicles
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>150 Premium
-                  City Tours
-                </p>
-              </div>
-              <div class="col-sm-6">
-                <p class="mb-0">
-                  <i class="fa fa-arrow-right text-primary me-2"></i>24/7
-                  Service
-                </p>
-              </div>
-            </div>
-            <a class="btn btn-primary py-3 px-5 mt-2" href="">Learn more</a>
           </div>
         </div>
-      </div>
+      </form>
     </div>
-    <!-- About End -->
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="section-title bg-white text-center text-primary px-3">
-            Travel Guides
-          </h6>
-          <h2 class="mb-5">Meet our Travel Guides</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv1.jpg" alt="" />
-              </div>
-              <div
-                class="position-relative d-flex justify-content-center"
-                style="margin-top: -19px"
-              >
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Phan Lê Văn Minh</h5>
-                <small>Handsome, cheerful, sociable</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv3.jpg" alt="" />
-              </div>
-              <div
-                class="position-relative d-flex justify-content-center"
-                style="margin-top: -19px"
-              >
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Lê Thị Khánh Huyền</h5>
-                <small>Pretty, enthusiastic, cheerful</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv4.jpg" alt="" />
-              </div>
-              <div
-                class="position-relative d-flex justify-content-center"
-                style="margin-top: -19px"
-              >
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Lê Phước Đức</h5>
-                <small>Handsome, enthusiastic, cheerful</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="team-item">
-              <div class="overflow-hidden">
-                <img class="img-fluid" src="img/hdv2.jpg" alt="" />
-              </div>
-              <div
-                class="position-relative d-flex justify-content-center"
-                style="margin-top: -19px"
-              >
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a class="btn btn-square mx-1" href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </div>
-              <div class="text-center p-4">
-                <h5 class="mb-0">Kazumi Sayuri</h5>
-                <small>Cute, hospitable, fun</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Team End -->
+    <!-- /.container -->
+
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
@@ -537,7 +452,9 @@
     </script>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -548,7 +465,6 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
-
     <script src="js/index.js"></script>
     <script src="js/main.js"></script>
   </body>
