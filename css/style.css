@@ -9,7 +9,8 @@
   color: var(--primary);
 }
 .bg-main-color {
-  color: var(--primary);
+  color: var(--light);
+  background-color: var(--primary);
 }
 .bg-footer-color {
   background-color: #f8f8f8;
