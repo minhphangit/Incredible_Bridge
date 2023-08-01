@@ -11,7 +11,14 @@
 .bg-main-color {
   color: var(--primary);
 }
-
+.bg-footer-color {
+  background-color: #f8f8f8;
+}
+.container-wrapper {
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
 .fw-medium {
   font-weight: 600 !important;
 }
