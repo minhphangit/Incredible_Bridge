@@ -288,3 +288,13 @@ const searchAndRedirect = () => {
   searchParams.append("results", JSON.stringify(foundProducts));
   window.location.href = `search.html?${searchParams.toString()}`;
 };
+
+// Add keypress event listener to the search input
+document
+  .getElementById("search-item")
+  .addEventListener("keypress", function (event) {
+    // Check if the key pressed is "Enter" (key code 13)
+    if (event.keyCode === 13) {
+      searchAndRedirect();
+    }
+  });

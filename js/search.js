@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                       <h5 class="card-title">${result.productName}</h5>
                       <p class="card-text ms-1">${result.productDetails}</p>
                       <a
-                        href="#"
+                        href="#!"
                         class="btn btn-success btn-add-cart text-white bg-main-color border-0"
                         >Learn more</a
                       >

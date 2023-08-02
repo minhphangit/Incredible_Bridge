@@ -194,6 +194,7 @@ function registerUser() {
   };
 
   setCookie(email, JSON.stringify(user), 30); // Cookie will expire in 30 days
+  setCookie("loggedInUser", email, 30);
   alert("Registration successful.You will be automatically logged in.");
   // Hide the login link
   document.getElementById("loginLink").style.display = "none";
@@ -201,6 +202,8 @@ function registerUser() {
   document.getElementById("accountDropdown").style.display = "block";
   // Set the user's name in the dropdown button
   document.querySelector(".account-drop").innerText = user.name;
+  // Redirect to index.html after successful registration
+  window.location.href = "index.html";
 }
 function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
@@ -219,6 +222,8 @@ function loginUser() {
       document.getElementById("accountDropdown").style.display = "block";
       // Set the user's name in the dropdown button
       document.querySelector(".account-drop").innerText = user.name;
+      // Redirect to index.html after successful registration
+      window.location.href = "index.html";
     } else {
       alert("Invalid email address or password. Please try again.");
     }
@@ -252,17 +257,15 @@ function checkLoggedInOnLoad() {
     const userCookie = getCookie(loggedInEmail);
     if (userCookie) {
       const user = JSON.parse(userCookie);
-      // Hide the login link
       document.getElementById("loginLink").style.display = "none";
-      // Show the dropdown
+      // Show the dropdown smoothly
       document.getElementById("accountDropdown").style.display = "block";
       // Set the user's name in the dropdown button
       document.querySelector(".account-drop").innerText = user.name;
     }
   } else {
-    // If the user is not logged in, show the login link and hide the dropdown
+    // If the user is not logged in, show the login link smoothly
     document.getElementById("loginLink").style.display = "block";
-    document.getElementById("accountDropdown").style.display = "none";
   }
 }
 
