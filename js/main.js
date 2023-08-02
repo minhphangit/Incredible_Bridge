@@ -141,6 +141,38 @@ switchers.forEach((item) => {
   });
 });
 // js check login and register
+// Function to set a cookie
+function setCookie(name, value, expirationDays) {
+  const date = new Date();
+  date.setTime(date.getTime() + expirationDays * 24 * 60 * 60 * 1000);
+  const expires = "expires=" + date.toUTCString();
+  document.cookie =
+    name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie value by name
+function getCookie(name) {
+  const cookieName = name + "=";
+  const cookies = document.cookie.split(";");
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    while (cookie.charAt(0) === " ") {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(cookieName) === 0) {
+      return decodeURIComponent(
+        cookie.substring(cookieName.length, cookie.length)
+      );
+    }
+  }
+  return null;
+}
+
+// Function to delete a cookie by name
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
 function registerUser() {
   const name = document.getElementById("Name").value;
   const email = document.getElementById("registerEmail").value;
@@ -153,7 +185,7 @@ function registerUser() {
     return;
   }
 
-  // Create a user object and store it in localStorage
+  // Create a user object and store it in cookies
   const user = {
     name,
     email,
@@ -161,22 +193,78 @@ function registerUser() {
     password,
   };
 
-  localStorage.setItem(email, JSON.stringify(user));
-  alert("Registration successful. You can now log in.");
+  setCookie(email, JSON.stringify(user), 30); // Cookie will expire in 30 days
+  alert("Registration successful.You will be automatically logged in.");
+  // Hide the login link
+  document.getElementById("loginLink").style.display = "none";
+  // Show the dropdown
+  document.getElementById("accountDropdown").style.display = "block";
+  // Set the user's name in the dropdown button
+  document.querySelector(".account-drop").innerText = user.name;
 }
 function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
   const loginPassword = document.getElementById("loginPassword").value;
 
-  // Check if the user exists in localStorage
-  const user = JSON.parse(localStorage.getItem(loginEmail));
-  if (user && user.password === loginPassword) {
-    alert("Login successful. Welcome, " + user.name + "!");
-    // Implement your logic here for a logged-in user, such as redirecting to a member page
-    // Optionally, you can store the logged-in user's information in localStorage for later use
-    localStorage.setItem("loggedInUser", loginEmail);
-    document.getElementById("loginButton").innerText = user.name;
+  // Check if the user exists in cookies
+  const userCookie = getCookie(loginEmail);
+  if (userCookie) {
+    const user = JSON.parse(userCookie);
+    if (user.password === loginPassword) {
+      alert("Login successful. Welcome, " + user.name + "!");
+      setCookie("loggedInUser", loginEmail, 30); // Cookie will expire in 30 days
+      // Hide the login link
+      document.getElementById("loginLink").style.display = "none";
+      // Show the dropdown
+      document.getElementById("accountDropdown").style.display = "block";
+      // Set the user's name in the dropdown button
+      document.querySelector(".account-drop").innerText = user.name;
+    } else {
+      alert("Invalid email address or password. Please try again.");
+    }
   } else {
-    alert("Invalid email address or password. Please try again.");
+    alert("User not found. Please register or check your credentials.");
   }
 }
+// Function to handle the logout action
+function logoutUser() {
+  // Show a confirmation message
+  const isConfirmed = window.confirm("Are you sure you want to log out?");
+  if (isConfirmed) {
+    deleteCookie("loggedInUser");
+    // Show the login link
+    document.getElementById("loginLink").style.display = "block";
+    // Hide the dropdown
+    document.getElementById("accountDropdown").style.display = "none";
+  } else {
+    // If the user cancels, do nothing
+  }
+}
+
+// Event listener for the "Log out" link
+document.getElementById("logoutLink").addEventListener("click", logoutUser);
+
+// Function to check if the user is already logged in when the page loads
+function checkLoggedInOnLoad() {
+  const loggedInEmail = getCookie("loggedInUser");
+
+  if (loggedInEmail) {
+    const userCookie = getCookie(loggedInEmail);
+    if (userCookie) {
+      const user = JSON.parse(userCookie);
+      // Hide the login link
+      document.getElementById("loginLink").style.display = "none";
+      // Show the dropdown
+      document.getElementById("accountDropdown").style.display = "block";
+      // Set the user's name in the dropdown button
+      document.querySelector(".account-drop").innerText = user.name;
+    }
+  } else {
+    // If the user is not logged in, show the login link and hide the dropdown
+    document.getElementById("loginLink").style.display = "block";
+    document.getElementById("accountDropdown").style.display = "none";
+  }
+}
+
+// Call the checkLoggedInOnLoad function when the page loads
+document.addEventListener("DOMContentLoaded", checkLoggedInOnLoad);

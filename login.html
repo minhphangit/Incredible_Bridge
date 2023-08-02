@@ -87,27 +87,27 @@
           <div class="d-inline-flex align-items-center" style="height: 45px">
             <a
               class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              href="#!"
               ><i class="fab fa-twitter fw-normal"></i
             ></a>
             <a
               class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              href="#!"
               ><i class="fab fa-facebook-f fw-normal"></i
             ></a>
             <a
               class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              href="#!"
               ><i class="fab fa-linkedin-in fw-normal"></i
             ></a>
             <a
               class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-              href=""
+              href="#!"
               ><i class="fab fa-instagram fw-normal"></i
             ></a>
             <a
               class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
-              href=""
+              href="#!"
               ><i class="fab fa-youtube fw-normal"></i
             ></a>
           </div>
@@ -121,7 +121,7 @@
       <nav
         class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
       >
-        <a href="" class="navbar-brand p-0">
+        <a href="index.html" class="navbar-brand p-0">
           <h1 class="text-primary m-0">
             <i class="fa-solid fa-bridge-water"></i> Bridge
           </h1>
@@ -173,9 +173,27 @@
             <a href="about.html" class="nav-item nav-link">About Us</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <a href="login.html" class="btn btn-primary rounded-pill py-2 px-4"
+          <a
+            href="login.html"
+            id="loginLink"
+            class="btn btn-primary rounded-pill py-2 px-4"
             >Login</a
           >
+
+          <div class="dropdown" id="accountDropdown">
+            <button
+              class="btn btn-primary dropdown-toggle account-drop"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#!">Your profile</a>
+              <a id="logoutLink" class="dropdown-item" href="#!">Log out</a>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -204,7 +222,7 @@
     </div>
     <!-- Navbar & Hero End -->
     <div class="login-form-wrapper container-wrapper">
-      <form class="form-signin rounded-sm shadow">
+      <form method="post" class="form-signin rounded-sm shadow">
         <!-- Nav tabs -->
         <ul class="nav nav-pills mb-4">
           <li class="nav-item pill-1">
@@ -224,6 +242,7 @@
           <div id="login" class="container tab-pane active">
             <label for="loginEmail" class="sr-only">Email address</label>
             <input
+              name="email_lg"
               type="email"
               id="loginEmail"
               class="form-control mb-4"
@@ -233,6 +252,7 @@
             />
             <label for="loginPassword" class="sr-only">Password</label>
             <input
+              name="pass_lg"
               type="password"
               id="loginPassword"
               class="form-control mb-4"
@@ -243,6 +263,7 @@
               <div class="checkbox">
                 <label>
                   <input
+                    name="remember"
                     type="checkbox"
                     checked="checked"
                     value="remember-me"
@@ -250,14 +271,9 @@
                   Remember me
                 </label>
               </div>
-              <a class="forgot" href="#">Forgot password?</a>
+              <a class="forgot" href="#!">Forgot password?</a>
             </div>
-            <div class="checkbox mb-3">
-              <label>
-                <input type="checkbox" value="login-as-instructor" /> Login as
-                instructor
-              </label>
-            </div>
+
             <button
               class="btn btn-lg btn-login btn-block"
               onclick="loginUser()"
@@ -273,6 +289,7 @@
           <div id="register" class="container tab-pane fade">
             <label for="Name" class="sr-only">Name</label>
             <input
+              name="name"
               type="text"
               id="Name"
               class="form-control mb-4"
@@ -281,6 +298,7 @@
             />
             <label for="registerEmail" class="sr-only">Email address</label>
             <input
+              name="email_rg"
               type="email"
               id="registerEmail"
               class="form-control mb-4"
@@ -290,6 +308,7 @@
             />
             <label for="Mobile" class="sr-only">Mobile</label>
             <input
+              name="mobile"
               type="tel"
               id="Mobile"
               class="form-control mb-4"
@@ -298,6 +317,7 @@
             />
             <label for="registerPassword" class="sr-only">Password</label>
             <input
+              name="pass_rg"
               type="password"
               id="registerPassword"
               class="form-control mb-4"
@@ -328,15 +348,15 @@
         <div class="row g-5">
           <div class="col-lg-3 col-md-6">
             <h4 class="text-white mb-3">
-              <a href="" class="navbar-brand p-0 text-primary">
+              <a href="index.html" class="navbar-brand p-0 text-primary">
                 <i class="fa-solid fa-bridge-water"></i> Bridge
               </a>
             </h4>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact</a>
-            <a class="btn btn-link" href="">Privacy Policy</a>
-            <a class="btn btn-link" href="">Terms & Conditions</a>
-            <a class="btn btn-link" href="">FAQs and Help</a>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="contact.html">Contact</a>
+            <a class="btn btn-link" href="#!">Privacy Policy</a>
+            <a class="btn btn-link" href="#!">Terms & Conditions</a>
+            <a class="btn btn-link" href="contact.html">FAQs and Help</a>
           </div>
           <div class="col-lg-3 col-md-6">
             <h4 class="text-white mb-3">Contact</h4>
@@ -348,16 +368,16 @@
               <i class="fa fa-envelope me-3"></i>minhduc@gmail.com
             </p>
             <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social" href=""
+              <a class="btn btn-outline-light btn-social" href="#!"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <a class="btn btn-outline-light btn-social" href=""
+              <a class="btn btn-outline-light btn-social" href="#!"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a class="btn btn-outline-light btn-social" href=""
+              <a class="btn btn-outline-light btn-social" href="#!"
                 ><i class="fab fa-youtube"></i
               ></a>
-              <a class="btn btn-outline-light btn-social" href=""
+              <a class="btn btn-outline-light btn-social" href="#!"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
@@ -374,6 +394,7 @@
             <p>Follow us for the latest news!</p>
             <div class="position-relative mx-auto" style="max-width: 400px">
               <input
+                name=""
                 class="form-control border-primary w-100 py-3 ps-4 pe-5"
                 type="text"
                 placeholder="Your Email "
@@ -392,8 +413,8 @@
         <div class="copyright">
           <div class="row">
             <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a class="border-bottom" href="#">minhduc.vn</a>, All Right
-              Reserved. Designed By
+              &copy; <a class="border-bottom" href="#!">minhduc.vn</a>, All
+              Right Reserved. Designed By
               <a class="border-bottom" href="#!"
                 >Minh & Đức - Project HTML AP34</a
               >
@@ -415,6 +436,7 @@
     ></a>
 
     <a
+      id="callButton"
       href="#!"
       class="btn btn-lg btn-primary glow-on-hover btn-lg-contact rounded-circle btn-phone"
       ><i class="fa-solid fa-phone-volume"></i>
