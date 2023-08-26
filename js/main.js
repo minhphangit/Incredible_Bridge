@@ -140,6 +140,7 @@ switchers.forEach((item) => {
     this.parentElement.classList.add("is-active");
   });
 });
+
 // js check login and register
 // Function to set a cookie
 function setCookie(name, value, expirationDays) {
@@ -271,3 +272,125 @@ function checkLoggedInOnLoad() {
 
 // Call the checkLoggedInOnLoad function when the page loads
 document.addEventListener("DOMContentLoaded", checkLoggedInOnLoad);
+
+// Lấy thông tin người dùng từ cookie và hiển thị trong các input chỉ đọc
+function displayUserInfoFromCookie() {
+  const loggedInUserEmail = getCookie("loggedInUser");
+  const userJson = getCookie(loggedInUserEmail);
+
+  if (userJson) {
+    const user = JSON.parse(userJson);
+    document.getElementById("name").value = user.name;
+    document.getElementById("email").value = user.email;
+    document.getElementById("mobile").value = user.mobile;
+  } else {
+    // Xử lý khi không tìm thấy thông tin người dùng
+  }
+}
+
+// Khi trang tải xong, gọi hàm để hiển thị thông tin người dùng từ cookie
+window.onload = function () {
+  displayUserInfoFromCookie();
+};
+
+function toggleEditSave() {
+  const editSaveBtn = document.querySelector(".editSaveBtn");
+  const inputElements = document.querySelectorAll("#name, #email, #mobile");
+  const saveBtn = document.getElementById("saveBtn");
+
+  if (inputElements[0].readOnly) {
+    // Entering edit mode
+    inputElements.forEach((input) => (input.readOnly = false));
+    editSaveBtn.textContent = "Save";
+    } else {
+    // Saving changes and exiting edit mode
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const mobile = document.getElementById("mobile").value;
+
+    // Get the user's email from the logged-in state
+    const loggedInUserEmail = getCookie("loggedInUser");
+
+    // Get the user's information from the cookie
+    const userJson = getCookie(loggedInUserEmail);
+
+    // Parse the user's information JSON
+    const user = JSON.parse(userJson);
+
+    // Update the user's information with the new values
+    user.name = name;
+    user.email = email;
+    user.mobile = mobile;
+
+    // Save the updated user's information back to the cookie
+    setCookie(loggedInUserEmail, JSON.stringify(user), 30);
+
+    // Vô hiệu hóa chế độ chỉnh sửa bằng cách thêm lại thuộc tính "readonly" vào các input
+    inputElements.forEach((input) => (input.readOnly = true));
+    editSaveBtn.textContent = "Edit";
+
+    // Show success message and reload the page
+    alert("Changes saved successfully.");
+    location.reload();
+  }
+}
+
+function toggleChangePassword() {
+  var frameDoiMatKhau = document.getElementById("frameDoiMatKhau");
+  if (frameDoiMatKhau.style.display === "none") {
+    frameDoiMatKhau.style.display = "inline-block";
+  } else {
+    frameDoiMatKhau.style.display = "none";
+  }
+}
+function changePass() {
+  var oldPassInput = document.getElementById("oldPass");
+  var newPassInput = document.getElementById("newPass");
+  var confirmPassInput = document.getElementById("confirmPass");
+
+  var newPassword = newPassInput.value;
+  var confirmPassword = confirmPassInput.value;
+
+  // Get the user's email from the logged-in state
+  var loggedInUserEmail = getCookie("loggedInUser");
+
+  // Get the user's information from the cookie
+  var userJson = getCookie(loggedInUserEmail);
+  // Parse the user's information JSON
+  var user = JSON.parse(userJson);
+
+  if (oldPassInput.value !== user.password) {
+    alert("Incorrect old password.");
+    oldPassInput.focus();
+    return;
+  }
+
+  if (newPassword === "") {
+    alert("New password cannot be blank.");
+    newPassInput.focus();
+    return;
+  }
+
+  if (newPassword !== confirmPassword) {
+    alert("Confirm password must match the new password.");
+    confirmPassInput.focus();
+    return;
+  }
+
+  // Update the new password in the user's information
+  user.password = newPassword;
+
+  // Save the updated user's information back to the cookie
+  setCookie(loggedInUserEmail, JSON.stringify(user), 30);
+
+  // Clear the input fields
+  oldPassInput.value = "";
+  newPassInput.value = "";
+  confirmPassInput.value = "";
+
+  // Show a success alert
+  alert("Password changed successfully.");
+
+  // Hide the password change form
+  toggleChangePassword();
+}

@@ -826,3 +826,17 @@
   background-color: #658b12;
   color: #fff;
 }
+.profile {
+  background: white;
+  padding: 50px 50px 0px 50px;
+  min-height: 270px;
+}
+.profile .label-proflie {
+  color: #000;
+}
+#butDoiMatKhau {
+  color: #86b817;
+}
+#butDoiMatKhau:hover {
+  cursor: pointer;
+}
