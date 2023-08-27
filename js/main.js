@@ -302,7 +302,7 @@ function toggleEditSave() {
     // Entering edit mode
     inputElements.forEach((input) => (input.readOnly = false));
     editSaveBtn.textContent = "Save";
-    } else {
+  } else {
     // Saving changes and exiting edit mode
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
