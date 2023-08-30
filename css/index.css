@@ -556,9 +556,9 @@ circle {
   transition: all 0.5s ease;
 }
 
-.portfolio-item {
-  /*width:100%;*/
-}
+
+
+
 .portfolio-item .item {
   /*width:303px;*/
   float: left;

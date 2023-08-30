@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Incredible Bridges</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main-home" >
+        <div class="main">
+     <div class="title">
+       <h1 style="margin: 0px; color: chartreuse; padding: 20px 0; text-align: center; background-color: rgba(176, 211, 177, 0.3);" >Bridge sightseeing tour - Admin</h1>
+     </div>
+
+
+     <div class="admin-menu " style="height: 100%;">
+        <div class="left col-3 ">
+             <h2 style="margin: 0px; padding: 20px; text-align: center; color: white;">MENU</h2>
+             <button class="home" ><span><i class="fa-solid fa-house"></i></span>Home</button>
+             <button class="product"  style=" cursor: pointer;
+             background-color: azure;
+             color: black;"><span></span>Bridges</button>
+             <button class="cart"><span></span>Ticket Orders</button>
+             <button class="guest" ><span></span>Guest</button>
+             <div class="back-to-home " style="border-top: 1px solid azure; margin: 40px 0; padding-top: 40px;">
+               <a href="index.html"> <button ><span></span>Log out to Home Page</button></a>
+             </div>
+
+        </div>
+        <div class="right col-9 "> 
+        <!-- home-admin -->
+        <div class="home-right row">
+          <div class="col-6">
+            <h2 class="mt-5 mb-5" style="color: azure;"> 
+              Number of tickets purchased</h2>
+            <img src="/img/bieudo1.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-6">
+            <h2 class="mt-5 mb-5" style="color: azure;"> Revenue</h2>
+            <img src="/img/bieudo2.jpg" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+
+
+        <!-- product -->
+             <div class="product-right">
+            <table style="color: azure; width: 100%; margin-top: 20px;">
+                <tr >
+                  <th>Number</th>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Discount</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>tk01</td>
+                  <td>Millau Bridge</td>
+                  <td>10$</td>
+                  <td>Discount 10%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>bd03</td>
+                  <td>Akashi-Kaikyō Bridge</td>
+                  <td>15$</td>
+                  <td>Discount 5%</td>
+                  <td></td>
+                
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>tk04</td>
+                  <td>Siduhe Bridge</td>
+                  <td>12$</td>
+                  <td>Discount 10%</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>tk1</td>
+                  <td>Millau Bridge</td>
+                  <td>70$</td>
+                  <td>Discount 15%</td>
+                  <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>tk1</td>
+                    <td>Rion-Antirion Bridge</td>
+                    <td>80$</td>
+                    <td>Discount 30%</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>ks03</td>
+                    <td>Russky Bridge</td>
+                    <td>40$</td>
+                    <td>Discount 30%</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>tk02</td>
+                    <td>Ponte della Bridge</td>
+                    <td>15$</td>
+                    <td>Discount 10%</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>tk7</td>
+                    <td>Danyang-Kunshan Bridge</td>
+                    <td>15$</td>
+                    <td>Discount 10%</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>bd06</td>
+                  <td>Ponte della Bridge</td>
+                  <td>10$</td>
+                  <td>Discount 10%</td>
+                  <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>bd03</td>
+                  <td>Russky Bridge</td>
+                  <td>50$</td>
+                  <td>Discount 10%</td>
+                  <td></td>
+                    <td></td>
+                  </tr>
+                <!-- Thêm dữ liệu của các mục còn lại -->
+              </table>
+
+              <div  class="filter-select mt-5">
+                 <select id="search" name="id" class="">
+                    <option value="id">Search by Id</option>
+                    <option value="name">Search by Name</option>
+                 
+                  </select>
+                
+                    <input type="text" placeholder="Search..." >
+                     <button>Add Bridge (+)</button>
+                 
+              </div>
+
+
+        </div>
+        
+              <!-- Đơn Hàng -->
+              <div class="cart-right">
+                <table style="color: azure; width: 100%; margin-top: 20px;">
+                    <tr >
+                      <th>Number</th>
+                      <th>Id</th>
+                      <th>Gues</th>
+                      <th>Bridges</th>
+                      <th>Total Money</th>
+                      <th>Time</th>
+                      
+                    </tr>
+                </table>
+              </div>
+
+               <!-- Khách -->
+               <div class="guest-right">
+                <table style="color: azure; width: 100%; margin-top: 20px;">
+                    <tr >
+                      <th>Number</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Account</th>
+                      <th>Pass</th>
+                      <th>Action</th>
+                      
+                    </tr>
+                </table>
+              </div>
+    </div>  
+     </div>
+    </div>
+</div>
+
+
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll(".admin-menu .left button");
+
+  buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      buttons.forEach(function(btn) {
+        btn.style.backgroundColor = "rgba(23, 22, 22, 0.5)";
+        btn.style.color = "white";
+      });
+
+      this.style.backgroundColor = "azure";
+      this.style.color = "black";
+    });
+  });
+});
+
+const guest = document.querySelector('.guest');
+const guest_right = document.querySelector('.guest-right')
+const cart_right = document.querySelector(".cart-right");
+const product = document.querySelector(".product");
+const cart = document.querySelector(".cart")
+const home =document.querySelector(".home");
+const product_right = document.querySelector(".product-right");
+const home_right = document.querySelector(".home-right")
+  home.addEventListener("click", function(){
+       home_right.style.display = "flex";
+       product_right.style.display = "none";
+})
+
+product.addEventListener("click", function(){
+       home_right.style.display = "none";
+       product_right.style.display = "block" ;
+       cart_right.style.display = "none";
+       guest_right.style.display = "none";
+})
+cart.addEventListener("click", function(){
+       home_right.style.display = "none";
+       product_right.style.display = "none" ;
+       cart_right.style.display = "block"
+       guest_right.style.display = "none";
+})
+guest.addEventListener("click", function(){
+       home_right.style.display = "none";
+       product_right.style.display = "none" ;
+       cart_right.style.display = "none";
+       guest_right.style.display = "block";
+})
+
+ </script>
+</body>
+</html>
