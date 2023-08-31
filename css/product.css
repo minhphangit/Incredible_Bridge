@@ -1,37 +1,35 @@
-main .main_intro{
-   
-    background-image: url(/img/img_bgBridge3.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
+main .main_intro {
+  background-image: url(../img/img_bgBridge3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
-.main_intro  h1{
-    margin-bottom: 20% ;
-    font-weight: bold;
-    
+.main_intro h1 {
+  margin-bottom: 20%;
+  font-weight: bold;
 }
-.main_intro h6{
-    display: inline-block;
+.main_intro h6 {
+  display: inline-block;
 }
-main .main_explain h2{
-    font-size: 35px;
-    font-weight: 600;
+main .main_explain h2 {
+  font-size: 35px;
+  font-weight: 600;
 }
-main .main_explain p{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.4em;
-}
-
-main .main_product .classify_product span{
-font-size: 22px;
-font-weight: 400;
+main .main_explain p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4em;
 }
 
+main .main_product .classify_product span {
+  font-size: 22px;
+  font-weight: 400;
+}
 
 .card-body {
+<<<<<<< HEAD
     text-align: center;
   }
   .card-title {
@@ -60,16 +58,44 @@ font-weight: 400;
   .page a:hover{
     font-weight: bold;
   }
+=======
+  text-align: center;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 650;
+}
+.card-text {
+  font-size: 15px;
+  font-weight: 500;
+}
+>>>>>>> 0c012dc8f63fcdd1fd5519a09424df2bee15a12f
 
-  .list-product-popular{
-    background-color: #86b817;
+.card {
+  border-radius: 12px;
+}
+
+.slider-item a:hover {
+  color: #81c8c2;
+}
+
+.page a {
+  padding: 10px;
+  display: inline-block;
+}
+.page a:hover {
+  font-weight: bold;
+}
+
+.list-product-popular {
+  background-color: #86b817;
   width: 100%;
   height: 450px;
   border-radius: 32px;
   margin: 50px 0px;
-  }
+}
 
-  /* .list-newBridge-slider{
+/* .list-newBridge-slider{
     background-color: #def396;
     width: 100%;
     height: 32  0px;
@@ -84,7 +110,11 @@ font-weight: 400;
     height: 100%;
   } */
 
+.content_newProduct {
+  display: flex;
+}
 
+<<<<<<< HEAD
   .content_newProduct{
     display: flex;
   }
@@ -131,37 +161,68 @@ font-weight: 400;
 }
 
   
+=======
+.content_newProduct .img-new-bridge img {
+  height: 450px;
+}
+>>>>>>> 0c012dc8f63fcdd1fd5519a09424df2bee15a12f
 
+.h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4em;
+}
 
 @media screen and (max-width: 769px) {
-    main .main_product .left_bridge{
-        display: none;
-    }
-    main .main_product{
-        display: flex;
-        justify-content: space-around;
-    }
-    main .main_explain h2{
-        font-size: 18px;
-        font-weight: 600;
-    }
-    main .main_explain p{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.4em;
-    }
-    .card-title {
-        font-size: 14px;
-        font-weight: 650;
-      }
-      .card-text {
-        font-size: 11px;
-        font-weight: 500;
-      }
-      .card a{
-      font-size: 12px;
-      }
+  main .main_product .left_bridge {
+    display: none;
+  }
+  main .main_product {
+    display: flex;
+    justify-content: space-around;
+  }
+  main .main_explain h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  main .main_explain p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 650;
+  }
+  .card-text {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .card a {
+    font-size: 12px;
+  }
 
+  .content_newProduct {
+    display: unset;
+    align-items: center;
+  }
+
+  .content_newProduct .img-new-bridge {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .content_newProduct .img-new-bridge img {
+    width: 60%;
+  }
+  .content_newProduct .list-bridge {
+    width: 100%;
+  }
+}
+
+<<<<<<< HEAD
       .content_newProduct{
         display: unset;
         align-items: center;
@@ -207,3 +268,21 @@ font-weight: 400;
       }
      
 }
+=======
+@media screen and (max-width: 426px) {
+  .card-title {
+    font-size: 11px;
+    font-weight: 650;
+  }
+  .card-text {
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .card a {
+    font-size: 5px;
+  }
+  .content_newProduct .img-new-bridge img {
+    height: 250px;
+  }
+}
+>>>>>>> 0c012dc8f63fcdd1fd5519a09424df2bee15a12f
