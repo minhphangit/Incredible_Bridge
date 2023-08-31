@@ -145,6 +145,11 @@ img:hover {
     color: black;
     margin-left: 45%;
 }
+.related-news  .list-related button:hover{
+    
+    color: rgb(246, 244, 244);
+   background-color: #19be56;
+}
 
 /* Đặt vé */
 .related-news .booking_details {
