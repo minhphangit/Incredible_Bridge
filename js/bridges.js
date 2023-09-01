@@ -37,4 +37,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+
+});
+
+
+
+
+//link
+
+
+var divConElements = document.querySelectorAll(".right_bridge .col");
+
+divConElements.forEach(function(divCon) {
+    divCon.addEventListener("click", function() {
+        window.location.href = "details.html"; // Chuyển đến trang details.html khi click vào div con
+    });
 });

@@ -1,6 +1,6 @@
 main .main_intro{
    
-    background-image: url(/img/img_bgBridge3.jpg);
+    background-image: url(../img/img_bgBridge3.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,6 +91,7 @@ font-weight: 400;
 
   .content_newProduct .img-new-bridge img{
     height: 450px;
+    width: 100%;
   
   }
  
