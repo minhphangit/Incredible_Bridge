@@ -1,3 +1,66 @@
+// location
+async function updateTicker() {
+  const tickerElement = document.getElementById("ticker-text");
+  const now = new Date();
+  const dateString = now.toLocaleDateString();
+  const timeString = now.toLocaleTimeString();
+  let locationString = "Fetching location...";
+
+  // Check if geolocation is available and user granted permission
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+
+        try {
+          // Call the LocationIQ Geocoding API to get the location name
+          // const apiKey = "pk.4736bfa859b144a51c14905763d1b8fd";
+          const response = await fetch(
+            `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&format=json`
+          );
+          const data = await response.json();
+          const locationName = data.display_name;
+
+          locationString = locationName;
+        } catch (error) {
+          console.error("Error getting location name:", error);
+          locationString = "Location unavailable";
+        }
+
+        // Update ticker text with the date, time, and location
+        const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
+        tickerElement.innerText = tickerText;
+
+        // Start scrolling the ticker
+        tickerElement.style.animation = "scrollingTicker 20s linear infinite";
+      },
+      (error) => {
+        console.error("Error getting geolocation:", error);
+
+        // Update ticker text even if geolocation fails
+        const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
+        tickerElement.innerText = tickerText;
+
+        // Start scrolling the ticker
+        tickerElement.style.animation = "scrollingTicker 20s linear infinite";
+      }
+    );
+  } else {
+    // If geolocation is not available, update ticker text accordingly
+    const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
+    tickerElement.innerText = tickerText;
+
+    // Start scrolling the ticker
+    tickerElement.style.animation = "scrollingTicker 20s linear infinite";
+  }
+}
+
+// Call updateTicker initially to show default "Fetching location..." message
+updateTicker();
+
+// Call updateTicker every 60 seconds to update the date, time, and location
+setInterval(updateTicker, 60000);
+
 // slide Top Historical Bridge
 $(".slide-responsive").slick({
   dots: true,
@@ -173,69 +236,6 @@ function autoRightSlide() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(autoRightSlide, 3000); // Gọi hàm autoRightSlide sau khi trang tải xong và sau mỗi 3000 miliseconds (3 giây)
 });
-
-// location
-async function updateTicker() {
-  const tickerElement = document.getElementById("ticker-text");
-  const now = new Date();
-  const dateString = now.toLocaleDateString();
-  const timeString = now.toLocaleTimeString();
-  let locationString = "Fetching location...";
-
-  // Check if geolocation is available and user granted permission
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-
-        try {
-          // Call the LocationIQ Geocoding API to get the location name
-          // const apiKey = "pk.4736bfa859b144a51c14905763d1b8fd";
-          const response = await fetch(
-            `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${latitude}&lon=${longitude}&format=json`
-          );
-          const data = await response.json();
-          const locationName = data.display_name;
-
-          locationString = locationName;
-        } catch (error) {
-          console.error("Error getting location name:", error);
-          locationString = "Location unavailable";
-        }
-
-        // Update ticker text with the date, time, and location
-        const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
-        tickerElement.innerText = tickerText;
-
-        // Start scrolling the ticker
-        tickerElement.style.animation = "scrollingTicker 20s linear infinite";
-      },
-      (error) => {
-        console.error("Error getting geolocation:", error);
-
-        // Update ticker text even if geolocation fails
-        const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
-        tickerElement.innerText = tickerText;
-
-        // Start scrolling the ticker
-        tickerElement.style.animation = "scrollingTicker 20s linear infinite";
-      }
-    );
-  } else {
-    // If geolocation is not available, update ticker text accordingly
-    const tickerText = `${dateString} - ${timeString} - Location: ${locationString}`;
-    tickerElement.innerText = tickerText;
-
-    // Start scrolling the ticker
-    tickerElement.style.animation = "scrollingTicker 20s linear infinite";
-  }
-}
-
-// Call updateTicker initially to show default "Fetching location..." message
-updateTicker();
-
-// Call updateTicker every 60 seconds to update the date, time, and location
-setInterval(updateTicker, 600000);
 
 //search
 const search = () => {
