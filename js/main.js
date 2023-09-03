@@ -209,10 +209,13 @@ function registerUser() {
 function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
   const loginPassword = document.getElementById("loginPassword").value;
-
-  // Check if the user exists in cookies
   const userCookie = getCookie(loginEmail);
-  if (userCookie) {
+  if (loginEmail === "admin" && loginPassword === "admin123") {
+    // Redirect to admin.html for admin users
+    window.location.href = "admin.html";
+  }
+  // Check if the user exists in cookies
+  else if (userCookie) {
     const user = JSON.parse(userCookie);
     if (user.password === loginPassword) {
       alert("Login successful. Welcome, " + user.name + "!");
@@ -223,15 +226,8 @@ function loginUser() {
       document.getElementById("accountDropdown").style.display = "block";
       // Set the user's name in the dropdown button
       document.querySelector(".account-drop").innerText = user.name;
-
-      // Check if the user is an admin
-      if (loginEmail === "admin" && loginPassword === "admin123") {
-        // Redirect to admin.html for admin users
-        window.location.href = "admin.html";
-      } else {
-        // Redirect to index.html for regular users
-        window.location.href = "index.html";
-      }
+      // Redirect to index.html after successful registration
+      window.location.href = "index.html";
     } else {
       alert("Invalid email address or password. Please try again.");
     }
