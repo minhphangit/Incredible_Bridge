@@ -50,6 +50,40 @@
     }
   });
 
+
+  //hide
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 2000) {
+      $(".contact_details").fadeIn("slow");
+    } else {
+      $(".contact_details").fadeOut("slow");
+    }
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1700) {
+      $(".picture_gif3").fadeIn("slow");
+    } else {
+      $(".picture_gif3").fadeOut("slow");
+    }
+  });
+  //hide
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    var windowHeight = $(this).height();
+    var documentHeight = $(document).height();
+    var distanceToBottom = documentHeight - (scrollTop + windowHeight);
+    
+
+    if (distanceToBottom <= 200) {
+       {
+        $('.picture_gif3').css('display', 'none');
+        $('.contact_details').css('display', 'none');
+       }
+    } 
+});
+
+
   // Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
@@ -214,15 +248,10 @@ function loginUser() {
   // Check if the user exists in cookies
   const userCookie = getCookie(loginEmail);
   
-  if(loginEmail === "admin@gmail.com" &&  loginPassword === "admin123" ) {
-    window.location.href = "/admin/index.html";
-  }
- else if (userCookie) {
-
-  const userCookie = getCookie(loginEmail);
+  
   if (loginEmail === "admin" && loginPassword === "admin123") {
     // Redirect to admin.html for admin users
-    window.location.href = "admin.html";
+    window.location.href = "/admin/index.html";
   }
   // Check if the user exists in cookies
   else if (userCookie) {
@@ -246,7 +275,7 @@ function loginUser() {
     alert("User not found. Please register or check your credentials.");
   }
 }
-}
+
 
 
 // Function to handle the logout action
