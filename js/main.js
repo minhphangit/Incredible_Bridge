@@ -209,6 +209,7 @@ function registerUser() {
 function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
   const loginPassword = document.getElementById("loginPassword").value;
+<<<<<<< HEAD
 
 
   // Check if the user exists in cookies
@@ -218,6 +219,15 @@ function loginUser() {
     window.location.href = "/admin/index.html";
   }
  else if (userCookie) {
+=======
+  const userCookie = getCookie(loginEmail);
+  if (loginEmail === "admin" && loginPassword === "admin123") {
+    // Redirect to admin.html for admin users
+    window.location.href = "admin.html";
+  }
+  // Check if the user exists in cookies
+  else if (userCookie) {
+>>>>>>> 4740f3e77bccf011d9b7074e11a7f0dab17f5cf3
     const user = JSON.parse(userCookie);
     if (user.password === loginPassword) {
       alert("Login successful. Welcome, " + user.name + "!");
@@ -238,7 +248,10 @@ function loginUser() {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4740f3e77bccf011d9b7074e11a7f0dab17f5cf3
 // Function to handle the logout action
 function logoutUser() {
   // Show a confirmation message
