@@ -58,14 +58,7 @@
 </head>
 
 <body>
-  <!-- Spinner Start -->
-  <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
-  <!-- Spinner End -->
+  
 
   <!-- Topbar Start -->
   <div class="container-fluid bg-dark px-5 d-none d-lg-block">
@@ -110,9 +103,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="index.html" class="nav-item nav-link ">Home</a>
           <div class="nav-item dropdown">
-            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Bridges</a>
+            <a href="#!" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Bridges</a>
             <div class="dropdown-menu m-0">
               <a href="Modern_Bridge.html" class="dropdown-item">Modern Bridges</a>
               <a href="Historical_Bridge.html" class="dropdown-item">Historical Bridges</a>
@@ -580,7 +573,7 @@
 
         <div class="slide-responsive py-4">
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img1.jpg" class="card-img-top card-img" alt="Bridge Rialto" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -596,7 +589,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img2.jpg" class="card-img-top card-img" alt="Bridge Tower" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -612,7 +605,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/baner1.jpg" class="card-img-top card-img" alt="Golden Gate Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -628,7 +621,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img3.jpg" class="card-img-top card-img" alt="Brooklyn Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -645,7 +638,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img3.jpg" class="card-img-top card-img" alt="Sydney Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -662,7 +655,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img5.jpg" class="card-img-top card-img" alt="Pont du Gard Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -678,7 +671,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img6.webp" class="card-img-top card-img" alt="Magdeburg Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -697,7 +690,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img7.webp" class="card-img-top card-img" alt="Stari Most Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -713,7 +706,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img8.webp" class="card-img-top card-img" alt="Saint-Bénezet Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -731,7 +724,7 @@
           </div>
 
           <div class="product px-3">
-            <a href="#!">
+            <a href="details.html">
               <div class="card overflow-hidden wow zoomIn" data-wow-delay="0.1s">
                 <img src="img/img3.jpg" class="card-img-top card-img" alt="Sydney Bridge" />
                 <div class="card-body wow fadeInUp" data-wow-delay="0.1s">
@@ -1040,10 +1033,35 @@
       class="fa-solid fa-phone-volume"></i>
   </a>
   <!-- Messenger Plugin chat Code -->
-  <div id="fb-root"></div>
+    <div id="fb-root"></div>
 
-  <!-- Your Plugin chat code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "119167267946791");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

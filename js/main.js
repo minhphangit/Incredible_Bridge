@@ -1,16 +1,5 @@
 (function ($) {
   "use strict";
-
-  // Spinner
-  var spinner = function () {
-    setTimeout(function () {
-      if ($("#spinner").length > 0) {
-        $("#spinner").removeClass("show");
-      }
-    }, 1);
-  };
-  spinner();
-
   // Initiate the wowjs
   new WOW().init();
 
@@ -244,18 +233,16 @@ function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
   const loginPassword = document.getElementById("loginPassword").value;
 
-
   // Check if the user exists in cookies
   const userCookie = getCookie(loginEmail);
-  
-  
+
+
   if (loginEmail === "admin" && loginPassword === "admin123") {
-    // Redirect to admin.html for admin users
-    window.location.href = "/admin/index.html";
+    window.location.href = "admin/index.html";
+
   }
   // Check if the user exists in cookies
   else if (userCookie) {
-
     const user = JSON.parse(userCookie);
     if (user.password === loginPassword) {
       alert("Login successful. Welcome, " + user.name + "!");
@@ -275,7 +262,6 @@ function loginUser() {
     alert("User not found. Please register or check your credentials.");
   }
 }
-
 
 
 // Function to handle the logout action
@@ -440,8 +426,3 @@ function changePass() {
   // Hide the password change form
   toggleChangePassword();
 }
-
-
-
-
-
