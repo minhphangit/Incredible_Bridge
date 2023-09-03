@@ -210,9 +210,14 @@ function loginUser() {
   const loginEmail = document.getElementById("loginEmail").value;
   const loginPassword = document.getElementById("loginPassword").value;
 
+
   // Check if the user exists in cookies
   const userCookie = getCookie(loginEmail);
-  if (userCookie) {
+  
+  if(loginEmail === "admin@gmail.com" &&  loginPassword === "admin123" ) {
+    window.location.href = "/admin/index.html";
+  }
+ else if (userCookie) {
     const user = JSON.parse(userCookie);
     if (user.password === loginPassword) {
       alert("Login successful. Welcome, " + user.name + "!");
@@ -232,6 +237,8 @@ function loginUser() {
     alert("User not found. Please register or check your credentials.");
   }
 }
+
+
 // Function to handle the logout action
 function logoutUser() {
   // Show a confirmation message
@@ -394,3 +401,10 @@ function changePass() {
   // Hide the password change form
   toggleChangePassword();
 }
+
+
+
+
+
+
+
