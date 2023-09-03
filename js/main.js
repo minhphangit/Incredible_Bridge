@@ -215,14 +215,7 @@ function loginUser() {
   const userCookie = getCookie(loginEmail);
   
   if(loginEmail === "admin@gmail.com" &&  loginPassword === "admin123" ) {
-    window.location.href = "/admin/index.html";
-  }
- else if (userCookie) {
-
-  const userCookie = getCookie(loginEmail);
-  if (loginEmail === "admin" && loginPassword === "admin123") {
-    // Redirect to admin.html for admin users
-    window.location.href = "admin.html";
+    window.location.href = "admin/index.html";
   }
   // Check if the user exists in cookies
   else if (userCookie) {
