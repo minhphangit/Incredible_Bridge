@@ -274,6 +274,7 @@ function logoutUser() {
     document.getElementById("loginLink").style.display = "block";
     // Hide the dropdown
     document.getElementById("accountDropdown").style.display = "none";
+    window.location.href = "index.html";
   } else {
     // If the user cancels, do nothing
   }
