@@ -223,8 +223,15 @@ function loginUser() {
       document.getElementById("accountDropdown").style.display = "block";
       // Set the user's name in the dropdown button
       document.querySelector(".account-drop").innerText = user.name;
-      // Redirect to index.html after successful registration
-      window.location.href = "index.html";
+
+      // Check if the user is an admin
+      if (loginEmail === "admin" && loginPassword === "admin123") {
+        // Redirect to admin.html for admin users
+        window.location.href = "admin.html";
+      } else {
+        // Redirect to index.html for regular users
+        window.location.href = "index.html";
+      }
     } else {
       alert("Invalid email address or password. Please try again.");
     }
@@ -232,6 +239,7 @@ function loginUser() {
     alert("User not found. Please register or check your credentials.");
   }
 }
+
 // Function to handle the logout action
 function logoutUser() {
   // Show a confirmation message
