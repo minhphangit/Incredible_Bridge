@@ -39,7 +39,6 @@
     }
   });
 
-
   //hide
   $(window).scroll(function () {
     if ($(this).scrollTop() > 2000) {
@@ -62,16 +61,14 @@
     var windowHeight = $(this).height();
     var documentHeight = $(document).height();
     var distanceToBottom = documentHeight - (scrollTop + windowHeight);
-    
 
     if (distanceToBottom <= 200) {
-       {
-        $('.picture_gif3').css('display', 'none');
-        $('.contact_details').css('display', 'none');
-       }
-    } 
-});
-
+      {
+        $(".picture_gif3").css("display", "none");
+        $(".contact_details").css("display", "none");
+      }
+    }
+  });
 
   // Back to top button
   $(window).scroll(function () {
@@ -144,6 +141,7 @@ if (visitCount) {
   localStorage.setItem("page_view", 1);
 }
 counterContainer.innerHTML = visitCount;
+
 // contact
 $(document).ready(function () {
   $("#callButton").on("click", function () {
@@ -236,10 +234,8 @@ function loginUser() {
   // Check if the user exists in cookies
   const userCookie = getCookie(loginEmail);
 
-
   if (loginEmail === "admin" && loginPassword === "admin123") {
     window.location.href = "admin/index.html";
-
   }
   // Check if the user exists in cookies
   else if (userCookie) {
@@ -262,7 +258,6 @@ function loginUser() {
     alert("User not found. Please register or check your credentials.");
   }
 }
-
 
 // Function to handle the logout action
 function logoutUser() {
